@@ -67,24 +67,28 @@ const SignUp = () => {
 
                   <input
                     type="name"
+                    id="username"
                     value={values.username}
                     onChange={handleChange}
                     placeholder="UserName"
                   />
                   <input
                     type="email"
+                    id="email"
                     value={values.email}
                     onChange={handleChange}
                     placeholder="Email"
                   />
                   <input
                     type="phone"
+                    id="phone"
                     value={values.phone}
                     onChange={handleChange}
                     placeholder="Phone No"
                   />
                   <input
                     type="password"
+                    id="password"
                     value={values.password}
                     onChange={handleChange}
                     placeholder="Password"
