@@ -3,7 +3,7 @@ import React from "react";
 import "./login.css";
 import google from "./resource/google.png";
 import mobile from "./resource/mobile.png";
-import Swal from "sweetalert2";
+// import Swal from "sweetalert2";
 import * as Yup from "yup";
 const SignUp = () => {
   const signUpForm = {
@@ -21,27 +21,14 @@ const SignUp = () => {
     // 3. Data
     // 4. Data Format
 
-    fetch(url + "/user/add", {
-      method: "POST",
-      body: JSON.stringify(formdata),
-      headers: {
-        "Content-Type": "application/json",
-      },
-    })
-      .then((res) => res.json())
-      .then((data) => {
-        console.log(data);
-        Swal.fire({
-          icon: "success",
-          title: "Success",
-          text: "Registered Successfully",
-        });
-      });
+    
   };
   //   4. Create Validation Schema
-
+  const phoneRegExp = /^((\\+[1-9]{1,4}[ \\-]*)|(\\([0-9]{2,3}\\)[ \\-]*)|([0-9]{2,4})[ \\-]*)*?[0-9]{3,4}?[ \\-]*[0-9]{3,4}?$/
   const myValidation = Yup.object().shape({
+    username:Yup.string().min(6, 'usename must six letter').max(20,'too long!').required('username required'),
     email: Yup.string().email("Invalid Email").required("Enter Email"),
+    phone:Yup.string().matches(phoneRegExp, 'Phone number is not valid'),
     password: Yup.string().min(3, "Too Short!!").required("Password Required"),
   });
   return (
@@ -58,8 +45,9 @@ const SignUp = () => {
             initialValues={signUpForm}
             onSubmit={userSubmit}
             validationSchema={myValidation}
-          >
-            {({ values, handleChange, handleSubmit }) => (
+            >
+            
+            {({ values, handleChange, handleSubmit, errors }) => (
               <form onSubmit={handleSubmit} action="">
                 <div className="main-head">
                   <h1>Sign Up</h1>
@@ -71,6 +59,8 @@ const SignUp = () => {
                     value={values.username}
                     onChange={handleChange}
                     placeholder="UserName"
+                    helperText={errors.username}
+                    error={Boolean(errors.username)}
                   />
                   <input
                     type="email"
@@ -78,6 +68,8 @@ const SignUp = () => {
                     value={values.email}
                     onChange={handleChange}
                     placeholder="Email"
+                    helperText={errors.email}
+                    error={Boolean(errors.email)}
                   />
                   <input
                     type="phone"
@@ -85,6 +77,8 @@ const SignUp = () => {
                     value={values.phone}
                     onChange={handleChange}
                     placeholder="Phone No"
+                    helperText={errors.phone}
+                    error={Boolean(errors.phone)}
                   />
                   <input
                     type="password"
@@ -92,6 +86,8 @@ const SignUp = () => {
                     value={values.password}
                     onChange={handleChange}
                     placeholder="Password"
+                    helperText={errors.password}
+                    error={Boolean(errors.password)}
                   />
                   <button type="submit">Cerate Account</button>
                 </div>
