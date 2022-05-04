@@ -1,4 +1,4 @@
-import { Formik } from "formik";
+import { Field,  Formik } from "formik";
 import React from "react";
 import "./resource/signup.css";
 import google from "./resource/google.png";
@@ -24,13 +24,14 @@ const SignUp = () => {
     
   };
   //   4. Create Validation Schema
-  const phoneRegExp = /^((\\+[1-9]{1,4}[ \\-]*)|(\\([0-9]{2,3}\\)[ \\-]*)|([0-9]{2,4})[ \\-]*)*?[0-9]{3,4}?[ \\-]*[0-9]{3,4}?$/
+  // const phoneRegExp = /^((\\+[1-9]{1,4}[ \\-]*)|(\\([0-9]{2,3}\\)[ \\-]*)|([0-9]{2,4})[ \\-]*)*?[0-9]{3,4}?[ \\-]*[0-9]{3,4}?$/
   const myValidation = Yup.object().shape({
     username:Yup.string().min(6, 'usename must six letter').max(20,'too long!').required('username required'),
     email: Yup.string().email("Invalid Email").required("Enter Email"),
-    phone:Yup.string().matches(phoneRegExp, 'Phone number is not valid'),
+    // phone:Yup.string().matches(phoneRegExp, 'Phone number is not valid'),
     password: Yup.string().min(3, "Too Short!!").required("Password Required"),
   });
+
   return (
     <>
       <div className="container">
@@ -53,7 +54,8 @@ const SignUp = () => {
                   <h1>Sign Up</h1>
                   <p>Let's set up your personal account</p>
 
-                  <input
+                  <Field
+                    name="username"
                     type="name"
                     id="username"
                     value={values.username}
@@ -63,6 +65,7 @@ const SignUp = () => {
                     error={Boolean(errors.username)}
                   />
                   <input
+                    name="email"
                     type="email"
                     id="email"
                     value={values.email}
@@ -72,6 +75,7 @@ const SignUp = () => {
                     error={Boolean(errors.email)}
                   />
                   <input
+                    name="phone"
                     type="phone"
                     id="phone"
                     value={values.phone}
@@ -81,6 +85,7 @@ const SignUp = () => {
                     error={Boolean(errors.phone)}
                   />
                   <input
+                    name="password"
                     type="password"
                     id="password"
                     value={values.password}
