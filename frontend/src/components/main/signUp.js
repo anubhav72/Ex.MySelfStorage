@@ -1,8 +1,8 @@
 import { Formik } from "formik";
 import React from "react";
-import "./login.css";
+import "./resource/signup.css";
 import google from "./resource/google.png";
-import mobile from "./resource/mobile.png";
+import signup_mobile from "./resource/signupmobile.png";
 // import Swal from "sweetalert2";
 import * as Yup from "yup";
 const SignUp = () => {
@@ -35,7 +35,7 @@ const SignUp = () => {
     <>
       <div className="container">
         <div className="one-sub-con">
-          <img src={mobile} alt="" />
+          <img src={signup_mobile} alt="" />
           <div className="account">
             <h1>Cerate a new Account</h1>
           </div>
@@ -102,7 +102,7 @@ const SignUp = () => {
                   </div>
 
                   <p>
-                    Already have an account? <a href="&"> Sign In</a>
+                    Already have an account? <a href="login"> Sign In</a>
                   </p>
                 </div>
               </form>

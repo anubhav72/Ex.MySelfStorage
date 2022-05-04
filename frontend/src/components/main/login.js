@@ -1,49 +1,49 @@
 import React from 'react';
-import { Formik, Form, Field } from 'formik';
+import "./resource/signin.css";
+import google from "./resource/google.png";
+import login_mobile from "./resource/loginmobile.png";
 
-function validateEmail(value) {
-  let error;
-  if (!value) {
-    error = 'Required';
-  } else if (!/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i.test(value)) {
-    error = 'Invalid email address';
-  }
-  return error;
-}
-
-function validateUsername(value) {
-  let error;
-  if (value === 'admin') {
-    error = 'Nice try!';
-  }
-  return error;
-}
 
 const Login = () => (
-  <div>
-    <h1>Signup</h1>
-    <Formik
-      initialValues={{
-        username: '',
-        email: '',
-      }}
-      onSubmit={values => {
-        // same shape as initial values
-        console.log(values);
-      }}
-    >
-      {({ errors, touched, isValidating }) => (
-        <Form>
-          <input name="email" validate={validateEmail} />
-          {errors.email && touched.email && <div>{errors.email}</div>}
+  <>
+    <div className="container">
+        <div className="one-sub-con">
+            <img src={login_mobile} alt=""/>
+            <div className="account">
+            <h1>Login your Account</h1>
+            </div>
+        </div>
+        <div className="two-sub-con">
+            <form action="">
+            <div className="main-head">
+                <h1>Sign In</h1>
+                <p>Enter your credentials to access your account </p>
 
-          <input name="username" validate={validateUsername} />
-          {errors.username && touched.username && <div>{errors.username}</div>}
+                
+                   
+                       
+                    <input className="image" type="email" placeholder="Email"/>
+                
+                    <input type="password" placeholder="Password"/>
+                    <button  type="submit">Sign In</button>
+                
+            </div>
+                <div className="main-info">
 
-          <button type="submit">Submit</button>
-        </Form>
-      )}
-    </Formik>
-  </div>
+                    <p>OR</p>
+                    <div className="google">
+
+                        <button> <img src={google} alt=""/> <span> Sign In with Google</span></button>
+                    </div>
+
+                    <p>Crate a new account? <a href="signup"> Sign Up</a></p>
+
+
+                </div>
+            </form>
+        </div>
+    </div>
+
+  </>
 );
 export default Login;
