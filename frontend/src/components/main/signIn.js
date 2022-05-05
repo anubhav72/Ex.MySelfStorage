@@ -4,16 +4,16 @@ import google from "./resource/google.png";
 import login_mobile from "./resource/loginmobile.png";
 
 
-const Login = () => (
+const Signup = () => (
   <>
     <div className="container">
-        <div className="one-sub-con">
+        <div className="one-signin-con">
             <img src={login_mobile} alt=""/>
             <div className="account">
             <h1>Login your Account</h1>
             </div>
         </div>
-        <div className="two-sub-con">
+        <div className="two-signin-con">
             <form action="">
             <div className="main-head">
                 <h1>Sign In</h1>
@@ -46,4 +46,4 @@ const Login = () => (
 
   </>
 );
-export default Login;
+export default Signup;
