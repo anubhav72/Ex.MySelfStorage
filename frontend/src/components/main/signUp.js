@@ -3,9 +3,11 @@ import React from "react";
 import "./resource/signup.css";
 import google from "./resource/google.png";
 import signup_mobile from "./resource/signupmobile.png";
+import app_config from "../../config";
 // import Swal from "sweetalert2";
 import * as Yup from "yup";
 const SignUp = () => {
+  const url = app_config.backend_url;
   // for sendind formdata to database
   const userSubmit = (formdata) => {
     console.log(formdata);
@@ -123,7 +125,7 @@ const SignUp = () => {
                   </div>
 
                   <p>
-                    Already have an account? <a href="login"> Sign In</a>
+                    Already have an account? <a href="signIn"> Sign In</a>
                   </p>
                 </div>
               </form>
