@@ -4,19 +4,12 @@ import "./resource/signup.css";
 import google from "./resource/google.png";
 import signup_mobile from "./resource/signupmobile.png";
 import app_config from "../../config";
-// import Swal from "sweetalert2";
+import Swal from "sweetalert2";
 import * as Yup from "yup";
 const SignUp = () => {
   const url = app_config.backend_url;
   // for sendind formdata to database
-  const userSubmit = (formdata) => {
-    console.log(formdata);
-
-    // 1. Address
-    // 2. Request method
-    // 3. Data
-    // 4. Data Format
-  };
+  
   //   4. Create Validation Schema
   const phoneRegExp =
     /^((\\+[1-9]{1,4}[ \\-]*)|(\\([0-9]{2,3}\\)[ \\-]*)|([0-9]{2,4})[ \\-]*)*?[0-9]{3,4}?[ \\-]*[0-9]{3,4}?$/;
@@ -40,6 +33,7 @@ const SignUp = () => {
       .max(12, "Very Long To Remember")
       .required("Password Required"),
   });
+  
 
   return (
     <>
@@ -58,10 +52,29 @@ const SignUp = () => {
               mobile: "",
               password: "",
             }}
+            
             validationSchema={myValidation}
-            onSubmit={(values) => {
+            onSubmit={(formdata) => {
               // same shape as initial values
-              console.log(values);
+              console.log(formdata);
+
+              fetch(url + "/user/add", {
+                method: "POST",
+                body: JSON.stringify(formdata),
+                headers: {
+                  "Content-Type": "application/json",
+                },
+              })
+                .then((res) => res.json())
+                .then((data) => {
+                  console.log(data);
+                  Swal.fire({
+                    icon: "success",
+                    title: "Success",
+                    text: "Registered Successfully",
+                  });
+                });
+
             }}
           >
             {({ values, handleSubmit, handleChange, errors, touched }) => (

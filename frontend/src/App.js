@@ -22,7 +22,6 @@ function App() {
         </Route>
         <Route element={<User />} path="user"></Route>
         <Route element={<Main />} path="main">
-
         </Route>
         <Route element={<SignUp />} path="signUp"/>
         <Route element={<SignIn />} path="signIn"/>
