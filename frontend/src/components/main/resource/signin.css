@@ -2,7 +2,7 @@
     box-sizing: border-box;
   }
   
-  body {
+  /* body {
     margin: 0%;
     padding: 0%;
     display: flex;
@@ -12,7 +12,7 @@
     backdrop-filter: bl;
     background-color: #f0f8ff;
   
-  }
+  } */
   /* =============Center comtainer============ */
   .container {
     display: flex;
@@ -32,18 +32,18 @@
     background-color: white;
     width: 48%;
   }
-  .one-sub-con img {
+  .one-signin-con img {
     position: relative;
-    right: 78px;
-    bottom: 32px;
+    right: 67px;
+    bottom: 10px;
   }
-  .account {
+  .account-signin {
     position: relative;
-    top: 362px;
-    right: 462px;
+    top: 384px;
+    right: 454px;
   }
   
-  .account h1 {
+  .account-signin h1 {
     margin: 0px;
     width: 260px;
     font-size: 40px;

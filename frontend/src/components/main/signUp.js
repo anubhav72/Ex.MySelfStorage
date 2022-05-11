@@ -37,7 +37,8 @@ const SignUp = () => {
 
   return (
     <>
-      <div className="container">
+    
+      <div className="main-container">
         <div className="one-sub-con">
           <img src={signup_mobile} alt="" />
           <div className="account">
@@ -146,6 +147,7 @@ const SignUp = () => {
           </Formik>
         </div>
       </div>
+      
     </>
   );
 };

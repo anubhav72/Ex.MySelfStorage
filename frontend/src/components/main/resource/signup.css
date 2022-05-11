@@ -2,21 +2,24 @@
     box-sizing: border-box;
   }
   
-  body {
+  /* body {
     margin: 0%;
     padding: 0%;
     display: flex;
     height: 100vh;
     align-items: center;
     justify-content: center;
-    /* background-color: aqua; */
-  }
+    background-color: aqua;
+  } */
+  
   /* =============Center comtainer============ */
-  .container {
+  .main-container {
     display: flex;
+    margin: 83px auto;
     height: 500px;
     width: 700px;
-    /* align-items: center; */
+    /* justify-content: center;
+    align-items: center; */
     background-color: rgb(214, 214, 175);
     border: 0px solid red;
     border-radius: 15px;
@@ -148,7 +151,7 @@
   body{
     background-color: aquamarine;
   }
-  .container{
+  .main-container{
     width: 350px;
     
   }
