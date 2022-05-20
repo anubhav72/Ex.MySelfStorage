@@ -5,8 +5,9 @@ import google from "./resource/google.png";
 import login_mobile from "./resource/loginmobile.png";
 import Swal from "sweetalert2";
 import * as Yup from "yup";
+import NavBar from "./navBar";
 
-const Signup = () => {
+const SignIn = () => {
   //   4. Create Validation Schema
 
   const emailRegExp =
@@ -23,7 +24,8 @@ const Signup = () => {
   });
   return (
     <>
-      <div className="container">
+    <NavBar/>
+      <div className="signin-container">
         <div className="one-signin-con">
           <img src={login_mobile} alt="" />
           <div className="account-signin">
@@ -60,8 +62,8 @@ const Signup = () => {
             }}
           >
             {({ values, handleSubmit, handleChange, errors, touched }) => (
-              <form action="" onSubmit={handleSubmit}>
-                <div className="main-head">
+              <form action="" className="signin-form" onSubmit={handleSubmit}>
+                <div className="main-signin-head">
                   <h1>Sign In</h1>
                   <p>Enter your credentials to access your account </p>
 
@@ -73,7 +75,7 @@ const Signup = () => {
                     placeholder="Email"
                   />
                   {errors.email && touched.email ? (
-                    <div className="error">{errors.email}</div>
+                    <div className="signin-error">{errors.email}</div>
                   ) : null}
 
                   <input
@@ -83,13 +85,13 @@ const Signup = () => {
                     placeholder="Password"
                   />
                   {errors.password && touched.password ? (
-                    <div className="error">{errors.password}</div>
+                    <div className="signin-error">{errors.password}</div>
                   ) : null}
                   <button type="submit">Sign In</button>
                 </div>
-                <div className="main-info">
+                <div className="main-signin-info">
                   <p>OR</p>
-                  <div className="google">
+                  <div className="google-signin">
                     <button>
                       {" "}
                       <img src={google} alt="" />{" "}
@@ -109,4 +111,4 @@ const Signup = () => {
     </>
   );
 };
-export default Signup;
+export default SignIn;

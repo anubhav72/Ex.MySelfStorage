@@ -1,11 +1,12 @@
 import { Formik } from "formik";
-import React from "react";
+import React,{useState} from "react";
 import "./resource/signup.css";
 import google from "./resource/google.png";
 import signup_mobile from "./resource/signupmobile.png";
 import app_config from "../../config";
 import Swal from "sweetalert2";
 import * as Yup from "yup";
+import NavBar from "./navBar";
 const SignUp = () => {
   const url = app_config.backend_url;
   // for sendind formdata to database
@@ -37,15 +38,15 @@ const SignUp = () => {
 
   return (
     <>
-    
-      <div className="main-container">
-        <div className="one-sub-con">
+      <NavBar/><div className="center">
+      <div className="signup-container ">
+        <div className="one-signup-con">
           <img src={signup_mobile} alt="" />
-          <div className="account">
-            <h1>Cerate a new Account</h1>
+          <div className="signup-account">
+            <h1>Create a new Account</h1>
           </div>
         </div>
-        <div className="two-sub-con">
+        <div className="two-signup-con">
           <Formik
             initialValues={{
               username: "",
@@ -79,8 +80,8 @@ const SignUp = () => {
             }}
           >
             {({ values, handleSubmit, handleChange, errors, touched }) => (
-              <form onSubmit={handleSubmit}>
-                <div className="main-head">
+              <form className="signup-form"onSubmit={handleSubmit}>
+                <div className="main-signup-head">
                   <h1>Sign Up</h1>
                   <p>Let's set up your personal account</p>
 
@@ -92,7 +93,7 @@ const SignUp = () => {
                     placeholder="UserName"
                   />
                   {errors.username && touched.username ? (
-                    <div className="error">{errors.username}</div>
+                    <div className="signup-error">{errors.username}</div>
                   ) : null}
                   <input
                     name="email"
@@ -102,7 +103,7 @@ const SignUp = () => {
                     placeholder="Email"
                   />
                   {errors.email && touched.email ? (
-                    <div className="error">{errors.email}</div>
+                    <div className="signup-error">{errors.email}</div>
                   ) : null}
                   <input
                     name="mobile"
@@ -113,7 +114,7 @@ const SignUp = () => {
                     placeholder="Mobile No"
                   />
                   {errors.mobile && touched.mobile ? (
-                    <div className="error">{errors.mobile}</div>
+                    <div className="signup-error">{errors.mobile}</div>
                   ) : null}
                   <input
                     name="password"
@@ -124,13 +125,13 @@ const SignUp = () => {
                     placeholder="Password"
                   />
                   {errors.password && touched.password ? (
-                    <div className="error">{errors.password}</div>
+                    <div className="signup-error">{errors.password}</div>
                   ) : null}
-                  <button type="submit">Cerate Account</button>
+                  <button type="submit" >Cerate Account</button>
                 </div>
-                <div className="main-info">
+                <div className="main-signup-info">
                   <p>OR</p>
-                  <div className="google">
+                  <div className="signup-google">
                     <button>
                       {" "}
                       <img src={google} alt="" />{" "}
@@ -147,7 +148,7 @@ const SignUp = () => {
           </Formik>
         </div>
       </div>
-      
+      </div>
     </>
   );
 };

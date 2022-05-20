@@ -33,12 +33,12 @@ const guestUser = [
   {
     name: "Home",
     link: "/home",
-    icon: <Home />,
+    // icon: <Home />,
   },
   {
-    name: "Login",
-    link: "/login",
-    icon: <Login />,
+    name: "Signin",
+    link: "/signin",
+    icon: <Login/>,
   },
   {
     name: "Signup",
@@ -158,6 +158,7 @@ const Header = () => {
           >
             VLOGGER
           </Typography>
+          
           <Box sx={{ flexGrow: 1, display: { xs: "none", md: "flex" } }}>
             {pages.map(({ name, link }) => (
               <Button

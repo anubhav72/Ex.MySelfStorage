@@ -34,6 +34,7 @@ router.get("/getbyid/:id", (req, res) => {
   res.send("you have requested on /getbyid in user");
 });
 
+// router for show all data of database
 router.get("/getall", (req, res) => {
   Model.find({})
     .then((data) => {
