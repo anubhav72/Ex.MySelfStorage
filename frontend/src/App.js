@@ -3,7 +3,7 @@ import "./App.css";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import SignIn from "./components/main/signIn";
 import SignUp from "./components/main/signUp";
-// import ResetPassword from "./components/main/resetPassword";
+import ResetPassword from "./components/main/resetPassword";
 import Admin from "./components/admin";
 import User from "./components/user";
 import Main from "./components/main";
@@ -12,6 +12,7 @@ import Profile from "./components/admin/profile";
 import AddLocation from "./components/admin/addLocation";
 import Header from "./components/main/header";
 import NavBar from "./components/main/navBar";
+import BrowseLocation from "./components/main/browseLocation";
 
 
 
@@ -28,16 +29,15 @@ function App() {
         <Route element={<User />} path="user"></Route>
         <Route element={<Main />} path="main">
         </Route>
+        <Route element={<NavBar/>} path="navBar"/>
         <Route element={<SignUp />} path="signUp"/>
         <Route element={<SignIn />} path="signIn"/>
-        <Route element={<Header />} path="header">
-
-        </Route>
-        <Route element={<Header />} path="header"/>
-        <Route element={<NavBar/>} path="navBar"/>
+        
+       
+        <Route element={<BrowseLocation/>} path="browseLocation"/>
         
         
-        {/* <Route element={<ResetPassword />} path="resetPassword"/> */}
+        <Route element={<ResetPassword />} path="resetPassword"/>
       </Routes>
     </BrowserRouter>
   );
