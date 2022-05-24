@@ -1,18 +1,14 @@
 /* * {
     box-sizing: border-box;
   } */
-  
-  /* body {
-    margin: 0%;
-    padding: 0%;
+  .signin-body{
     display: flex;
-    height: 100vh;
-    align-items: center;
+    width: 100%;
+    height: 50px;
     justify-content: center;
-    backdrop-filter: bl;
-    background-color: #f0f8ff;
+    align-items: center;
+  }
   
-  } */
   /* =============Center comtainer============ */
   .signin-container {
     display: flex;

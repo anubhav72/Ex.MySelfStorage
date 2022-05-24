@@ -1,7 +1,9 @@
 import React from "react";
 import { Outlet } from "react-router-dom";
 import Sidebar from "../sidebar";
-import { AccountCircle, Dashboard ,} from "@mui/icons-material";
+import { AccountCircle, Dashboard , } from "@mui/icons-material";
+import ManageAccountsIcon from '@mui/icons-material/ManageAccounts';
+import AddLocationAltIcon from '@mui/icons-material/AddLocationAlt';
 
 const Admin = () => {
   const sidebarOptions = [
@@ -17,8 +19,13 @@ const Admin = () => {
     },
     {
       name: "addLocation",
-      icon: <Dashboard />,
+      icon: < AddLocationAltIcon/>,
       link: "/admin/addLocation",
+    },
+    {
+      name: "manageUser",
+      icon: <ManageAccountsIcon />,
+      link: "/admin/manageUser",
     },
   ];
 

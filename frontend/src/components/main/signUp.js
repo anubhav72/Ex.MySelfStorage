@@ -12,22 +12,22 @@ const SignUp = () => {
   // for sendind formdata to database
   
   //   4. Create Validation Schema
-  const phoneRegExp =
-    /^((\\+[1-9]{1,4}[ \\-]*)|(\\([0-9]{2,3}\\)[ \\-]*)|([0-9]{2,4})[ \\-]*)*?[0-9]{3,4}?[ \\-]*[0-9]{3,4}?$/;
-  const emailRegExp =
-    /^(([^<>()[\]\.,;:\s@\"]+(\.[^<>()[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i;
+  // const phoneRegExp =
+  //   '/^((\\+[1-9]{1,4}[ \\-]*)|(\\([0-9]{2,3}\\)[ \\-]*)|([0-9]{2,4})[ \\-]*)*?[0-9]{3,4}?[ \\-]*[0-9]{3,4}?$/';
+  // const emailRegExp =
+  //   '/^(([^<>()[\]\.,;:\s@\"]+(\.[^<>()[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i';
   const myValidation = Yup.object().shape({
     username: Yup.string()
       .min(5, "UserName Must Five Letter")
       .max(20, "Too Long!")
       .required("UserName Required"),
     email: Yup.string()
-      .matches(emailRegExp, "Email Invalid")
+      // .matches(emailRegExp, "Email Invalid")
       .required("Enter Email"),
     mobile: Yup.string()
       .min(10, "Enter Valid Mobile Number")
       .max(10, "Mobile Number Must Be 10 Digits")
-      .matches(phoneRegExp,"Mobile number is not valid")
+      // .matches(phoneRegExp,"Mobile number is not valid")
       .required("Phone No Required"),
     password: Yup.string()
       .min(6, "Too Short!!")
