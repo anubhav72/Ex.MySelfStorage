@@ -25,6 +25,7 @@ const SignIn = () => {
   return (
     <>
     <NavBar/>
+    <div className="signin-body"></div>
       <div className="signin-container">
         <div className="one-signin-con">
           <img src={login_mobile} alt="" />
