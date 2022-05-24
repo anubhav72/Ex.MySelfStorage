@@ -10,7 +10,7 @@ import Main from "./components/main";
 import Dashboard from "./components/admin/dashboard";
 import Profile from "./components/admin/profile";
 import AddLocation from "./components/admin/addLocation";
-import Header from "./components/main/header";
+// import Header from "./components/main/header";
 import NavBar from "./components/main/navBar";
 import BrowseLocation from "./components/main/browseLocation";
 
@@ -32,12 +32,12 @@ function App() {
         <Route element={<NavBar/>} path="navBar"/>
         <Route element={<SignUp />} path="signUp"/>
         <Route element={<SignIn />} path="signIn"/>
+        <Route element={<BrowseLocation/>} path="browseLocation"/>
+        <Route element={<ResetPassword />} path="resetPassword"/>
         
        
-        <Route element={<BrowseLocation/>} path="browseLocation"/>
         
         
-        <Route element={<ResetPassword />} path="resetPassword"/>
       </Routes>
     </BrowserRouter>
   );

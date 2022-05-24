@@ -1,10 +1,12 @@
 import React from 'react'
+import NavBar from './navBar';
 import "./resource/browselocation.css";
 
 const BrowseLocation = () => {
   return (
       <>
       <div className="main-con">
+      <NavBar />
         <div className="browse-con">
             
                 <form action= ""className="browse-in-con">
@@ -46,12 +48,6 @@ const BrowseLocation = () => {
                     <div className="div-btn"><button>Book Space</button></div>
                 </div>
             </div>
-            
-            
-            
-            
-
-         
             
         </div>
     </div>
