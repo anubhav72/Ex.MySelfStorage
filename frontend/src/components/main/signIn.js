@@ -43,11 +43,11 @@ const SignIn = () => {
         res.json().then((data) => {
           if (data.isAdmin) {
             sessionStorage.setItem("admin", JSON.stringify(data));
-            navigate("/admin/dashboard");
+            navigate("/admin/managelocation");
             return;
           } else {
             sessionStorage.setItem("user", JSON.stringify(data));
-            navigate("/user/managewebpage");
+            navigate("/user/home");
             return;
           }
         });
