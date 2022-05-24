@@ -13,7 +13,7 @@ import AddLocation from "./components/admin/addLocation";
 import NavBar from "./components/main/navBar";
 import BrowseLocation from "./components/main/browseLocation";
 import Home from "./components/main/home";
-import ManageUsers from "./components/admin/manageUser";
+import ManageUsers from "./components/admin/manageuser";
 
 function App() {
   return (
@@ -23,7 +23,8 @@ function App() {
           <Route element={<Dashboard />} path="dashboard" />
           <Route element={<Profile />} path="profile" />
           <Route element={<AddLocation />} path="addLocation" />
-          <Route element={<ManageUsers/>} path="manageUser" />
+          {/* <Route element={<ManageLoca />} path="managelocation" /> */}
+          <Route element={<ManageUsers />} path="manageUser" />
         </Route>
 
         <Route element={<User />} path="user"></Route>
