@@ -23,7 +23,7 @@ function App() {
           <Route element={<Dashboard />} path="dashboard" />
           <Route element={<Profile />} path="profile" />
           <Route element={<AddLocation />} path="addLocation" />
-          <Route elemen={<ManageUsers/>} path="manageUser" />
+          <Route element={<ManageUsers/>} path="manageUser" />
         </Route>
 
         <Route element={<User />} path="user"></Route>

@@ -114,13 +114,14 @@ const ManageUsers = () => {
   const displayUserData = () => {
     if (!loading) {
       return userList.map(
-        ({ age, createdAt, username, password, email, _id }) => (
+        ({  createdAt, username, password, email, _id }) => (
           <Accordion>
             <AccordionSummary expandIcon={<ExpandMore />}>
               {username}
             </AccordionSummary>
             <AccordionDetails>
-              <h5>Age : {age}</h5>
+
+              <h5>Username : {username}</h5>
               <h5>Password : {password}</h5>
               <h5>Email : {email}</h5>
               <h5>Added On : {createdAt}</h5>
@@ -137,9 +138,8 @@ const ManageUsers = () => {
                 onClick={(e) => {
                   setShowUpdateForm(true);
                   setUserFormData({
-                    age,
-                    createdAt,
                     username,
+                    createdAt,
                     password,
                     email,
                     _id,
