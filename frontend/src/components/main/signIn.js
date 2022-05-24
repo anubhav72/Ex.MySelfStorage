@@ -15,11 +15,11 @@ const SignIn = () => {
   const navigate = useNavigate();
   const url = app_config.backend_url;
 
-  const emailRegExp =
-    '/^(([^<>()[\]\.,;:\s@\"]+(\.[^<>()[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i';
+  // const emailRegExp =
+  //   '/^(([^<>()[\]\.,;:\s@\"]+(\.[^<>()[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i';
   const myValidation = Yup.object().shape({
     email: Yup.string()
-      .matches(emailRegExp, "Email Invalid")
+      // .matches(emailRegExp, "Email Invalid")
       .required("Enter Email"),
 
     password: Yup.string()
@@ -88,6 +88,7 @@ const SignIn = () => {
                   <input
                     className="image"
                     type="email"
+                    id="email"
                     value={values.email}
                     onChange={handleChange}
                     placeholder="Email"
@@ -98,6 +99,7 @@ const SignIn = () => {
 
                   <input
                     type="password"
+                    id="password"
                     value={values.password}
                     onChange={handleChange}
                     placeholder="Password"
