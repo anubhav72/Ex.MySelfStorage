@@ -6,12 +6,17 @@ import login_mobile from "./resource/loginmobile.png";
 import Swal from "sweetalert2";
 import * as Yup from "yup";
 import NavBar from "./navBar";
+import { useNavigate } from "react-router-dom";
+import app_config from "../../config";
 
 const SignIn = () => {
   //   4. Create Validation Schema
 
+  const navigate = useNavigate();
+  const url = app_config.backend_url;
+
   const emailRegExp =
-    /^(([^<>()[\]\.,;:\s@\"]+(\.[^<>()[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i;
+    '/^(([^<>()[\]\.,;:\s@\"]+(\.[^<>()[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i';
   const myValidation = Yup.object().shape({
     email: Yup.string()
       .matches(emailRegExp, "Email Invalid")
@@ -22,10 +27,42 @@ const SignIn = () => {
       .max(12, "Very Long To Remember")
       .required("Password Required"),
   });
+
+  const loginSubmit = (formdata) => {
+    fetch(url + "/user/authenticate", {
+      method: "POST",
+      body: JSON.stringify(formdata),
+      headers: { "Content-Type": "application/json" },
+    }).then((res) => {
+      if (res.status === 200) {
+        Swal.fire({
+          title: "Successfully Logged In!",
+          icon: "success",
+        });
+
+        res.json().then((data) => {
+          if (data.isAdmin) {
+            sessionStorage.setItem("admin", JSON.stringify(data));
+            navigate("/admin/dashboard");
+            return;
+          } else {
+            sessionStorage.setItem("user", JSON.stringify(data));
+            navigate("/user/managewebpage");
+            return;
+          }
+        });
+      } else if (res.status === 400) {
+        Swal.fire({
+          icon: "error",
+          title: "Oops!!",
+          text: "Login Failed",
+        });
+      }
+    });
+  };
   return (
     <>
-    <NavBar/>
-    <div className="signin-body"></div>
+      <NavBar />
       <div className="signin-container">
         <div className="one-signin-con">
           <img src={login_mobile} alt="" />
@@ -40,30 +77,10 @@ const SignIn = () => {
               password: "",
             }}
             validationSchema={myValidation}
-            onSubmit={(formdata) => {
-              // same shape as initial values
-              console.log(formdata);
-
-              //   fetch(url + "/user/add", {
-              //     method: "POST",
-              //     body: JSON.stringify(formdata),
-              //     headers: {
-              //       "Content-Type": "application/json",
-              //     },
-              //   })
-              //     .then((res) => res.json())
-              //     .then((data) => {
-              //       console.log(data);
-              //       Swal.fire({
-              //         icon: "success",
-              //         title: "Success",
-              //         text: "Registered Successfully",
-              //       });
-              //     });
-            }}
+            onSubmit={loginSubmit}
           >
             {({ values, handleSubmit, handleChange, errors, touched }) => (
-              <form action="" className="signin-form" onSubmit={handleSubmit}>
+              <form className="signin-form" onSubmit={handleSubmit}>
                 <div className="main-signin-head">
                   <h1>Sign In</h1>
                   <p>Enter your credentials to access your account </p>
@@ -101,7 +118,7 @@ const SignIn = () => {
                   </div>
 
                   <p>
-                  Create a new account? <a href="signup"> Sign Up</a>
+                    Create a new account? <a href="signup"> Sign Up</a>
                   </p>
                 </div>
               </form>
