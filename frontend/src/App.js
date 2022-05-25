@@ -14,7 +14,7 @@ import AddLocation from "./components/admin/addLocation";
 // import NavBar from "./components/main/navBar";
 import BrowseLocation from "./components/main/browseLocation";
 import Home from "./components/main/home";
-import ManageUsers from "./components/admin/manageUser";
+import ManageUsers from "./components/admin/manageuser";
 import ManageLocations from "./components/admin/manageLocation";
 
 function App() {
@@ -37,9 +37,8 @@ function App() {
           <Route element={<SignIn />} path="signIn" />
           <Route element={<BrowseLocation />} path="browseLocation" />
           <Route element={<ResetPassword />} path="resetPassword" />
-          
         </Route>
-        
+
         <Route element={<Navigate to="/main/home" />} path="/"></Route>
       </Routes>
     </BrowserRouter>
