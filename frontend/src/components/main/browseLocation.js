@@ -29,16 +29,56 @@ const BrowseLocation = () => {
     fetchData();
   }, []);
 
+  const searchCard = () => {
+    return (
+      <div className="">
+        <div className="card">
+          <div className="card-header bg-white p-4">
+            <div class="input-group rounded">
+              <input
+                style={{ border: "none", outline: "none" }}
+                type="search"
+                class="form-control rounded"
+                placeholder="Search"
+                aria-label="Search"
+                aria-describedby="search-addon"
+              />
+              <span
+                class="input-group-text border-0 bg-white"
+                id="search-addon"
+              >
+                <i class="fas fa-search"></i>
+              </span>
+            </div>
+          </div>
+          <div className="card-body p-4">
+            <p className="text-muted">ADVANCED SEARCH</p>
+            <div className="row">
+              <div className="col-sm-3">
+                <button className="btn btn-outline-primary">City</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    );
+  };
+
   const displayLocations = () => {
     if (!loading) {
       return datalist.map((data) => (
-        <div className="col-md">
-          <div className="card">
-            <div className="card-body">
-              <h3>Space Available : {data.totalSpace}</h3>
-              <p>{data.address}</p>
+        <div className="">
+          <div className="card mt-5">
+            <div className="row">
+              <div className="col-md-4"></div>
+              <div className="col-md-8">
+                <div className="card-body">
+                  <h3>Space Available : {data.totalSpace}</h3>
+                  <p>{data.address}</p>
 
-              <button className="btn btn-primary">Book Now</button>
+                  <button className="btn btn-primary">Book Now</button>
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -47,10 +87,10 @@ const BrowseLocation = () => {
   };
 
   return (
-    <div className="container">
-      <div className="main-con">
-        <NavBar />
-        <div className="browse-con">
+    <div className="pt-5" style={{ background: "#eee" }}>
+      <div className="container">
+        {/* <NavBar /> */}
+        {/* <div className="browse-con">
           <form action="" className="browse-in-con">
             <div className="form-in">
               {" "}
@@ -65,69 +105,9 @@ const BrowseLocation = () => {
               <button>find</button>
             </div>
           </form>
-
-          <div className="user-con">
-            <div className="user-con-1">
-              <h1>Lucknow</h1>
-            </div>
-            <div className="user-con-2">
-              <div className="div-add">
-                <p>
-                  Bonanza, L-65, Tej Kumar Plaza, Opposite Darulsafa,
-                  Hazratganj, Hazratganj, Lucknow, Uttar Pradesh 226001
-                </p>
-              </div>
-              <div className="div-space">
-                <p>6*8 sq ft</p>
-              </div>
-
-              <div className="div-btn">
-                <button>Book Space</button>
-              </div>
-            </div>
-          </div>
-          <div className="user-con">
-            <div className="user-con-1">
-              <h1>Lucknow</h1>
-            </div>
-            <div className="user-con-2">
-              <div className="div-add">
-                <p>
-                  Bonanza, L-65, Tej Kumar Plaza, Opposite Darulsafa,
-                  Hazratganj, Hazratganj, Lucknow, Uttar Pradesh 226001
-                </p>
-              </div>
-              <div className="div-space">
-                <p>6*8 sq ft</p>
-              </div>
-
-              <div className="div-btn">
-                <button>Book Space</button>
-              </div>
-            </div>
-          </div>
-          <div className="user-con">
-            <div className="user-con-1">
-              <h1>Lucknow</h1>
-            </div>
-            <div className="user-con-2">
-              <div className="div-add">
-                <p>
-                  Bonanza, L-65, Tej Kumar Plaza, Opposite Darulsafa,
-                  Hazratganj, Hazratganj, Lucknow, Uttar Pradesh 226001
-                </p>
-              </div>
-              <div className="div-space">
-                <p>6*8 sq ft</p>
-              </div>
-
-              <div className="div-btn">
-                <button>Book Space</button>
-              </div>
-            </div>
-          </div>
-          <div className="row mt-5">{displayLocations()}</div>
-        </div>
+        </div> */}
+        {searchCard()}
+        <div className="">{displayLocations()}</div>
       </div>
     </div>
   );
