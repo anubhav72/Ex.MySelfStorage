@@ -21,7 +21,7 @@ const ManageLocations = () => {
   const [userFormData, setUserFormData] = useState({});
 
   const fetchLocationData = () => {
-    fetch(url + "/admin/getall")
+    fetch(url + "/location/getall")
       .then((res) => res.json())
       .then((data) => {
         console.log(data);
@@ -61,18 +61,18 @@ const ManageLocations = () => {
                 id="state"
                 value={values.state}
                 onChange={handleChange}
-                helperText={errors.state}
-                error={Boolean(errors.state)}
+                helperText={errors.city}
+                error={Boolean(errors.city)}
               />
               <TextField
                 className="mt-3"
-                label="city"
+                label="address"
                 variant="outlined"
-                id="city"
-                value={values.city}
+                id="address"
+                value={values.address}
                 onChange={handleChange}
-                helperText={errors.city}
-                error={Boolean(errors.city)}
+                helperText={errors.address}
+                error={Boolean(errors.address)}
               />
               <TextField
                 className="mt-3"
@@ -108,20 +108,7 @@ const ManageLocations = () => {
                 helperText={errors.createdAt}
                 error={Boolean(errors.createdAt)}
               />
-              
-              <TextField
-                className="mt-3"
-                label="id"
-                type="string"
-                variant="outlined"
-                id="_id"
-                value={values._id}
-                onChange={handleChange}
-                helperText={errors._id}
-                error={Boolean(errors._id)}
-              />
-              
-              
+
               <Button type="submit" className="mt-3" variant="contained">
                 Update User
               </Button>
@@ -143,18 +130,17 @@ const ManageLocations = () => {
   const displayLocationData = () => {
     if (!loading) {
       return userList.map(
-        ({  createdAt, state, city, totalSpace, price, _id }) => (
+        ({ createdAt,  city, address, totalSpace, price, _id }) => (
           <Accordion>
             <AccordionSummary expandIcon={<ExpandMore />}>
               {city}
             </AccordionSummary>
             <AccordionDetails>
-
-              <h5>State : {state}</h5>
               <h5>City : {city}</h5>
+              <h5>Address : {address}</h5>
               <h5>Totalspace : {totalSpace}</h5>
               <h5>Price : {price}</h5>
-              <h5>ID : {_id}</h5>
+              
               <h5>Added On : {createdAt}</h5>
 
               <Fab
@@ -169,11 +155,11 @@ const ManageLocations = () => {
                 onClick={(e) => {
                   setShowupdateLocationForm(true);
                   setUserFormData({
-                    state,
-                    createdAt,
                     city,
+                    address,
                     totalSpace,
                     price,
+                    createdAt,
                     _id,
                   });
                 }}

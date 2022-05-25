@@ -2,8 +2,8 @@ const mongoose = require("../connection");
 
 
 const schema = new mongoose.Schema({
-  state: String,
   city: String,
+  address: String,
   totalSpace:String,
   price: String,
   createdAt: { type: Date, default: new Date() },

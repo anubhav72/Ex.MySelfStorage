@@ -16,6 +16,7 @@ import BrowseLocation from "./components/main/browseLocation";
 import Home from "./components/main/home";
 import ManageUsers from "./components/admin/manageUser";
 import ManageLocations from "./components/admin/manageLocation";
+import BookingSpace from "./components/main/bookingSpace";
 
 function App() {
   return (
@@ -36,6 +37,7 @@ function App() {
           <Route element={<Home />} path="home" />
           <Route element={<SignIn />} path="signIn" />
           <Route element={<BrowseLocation />} path="browseLocation" />
+          <Route element={<BookingSpace />} path="bookingSpace" />
           <Route element={<ResetPassword />} path="resetPassword" />
         </Route>
 

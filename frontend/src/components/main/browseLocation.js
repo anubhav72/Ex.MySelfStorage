@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import app_config from "../../config";
 import NavBar from "./navBar";
-// import "./resource/browselocation.css";
+// import "./resource/browselocation.css";                    
 
 const BrowseLocation = () => {
   const [datalist, setDatalist] = useState([]);
