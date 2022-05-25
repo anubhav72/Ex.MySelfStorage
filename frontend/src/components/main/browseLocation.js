@@ -74,9 +74,11 @@ const BrowseLocation = () => {
               <div className="col-md-8">
                 <div className="card-body">
                   <h3>Space Available : {data.totalSpace}</h3>
-                  <p>{data.address}</p>
+                  <p>Address : {data.address}</p>
+                  <p>City : {data.city}</p>
+                  <p>Price : {data.price}</p>
 
-                  <button className="btn btn-primary">Book Now</button>
+                  <button className="btn btn-primary ">Book Now</button>
                 </div>
               </div>
             </div>
