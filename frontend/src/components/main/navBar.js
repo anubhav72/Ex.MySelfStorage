@@ -22,7 +22,7 @@ const NavBar = () => {
             <a href="/">Solutions</a>
           </li>
           <li>
-            <a href="/">Products</a>
+            <a href="browselocation">Browse Location</a>
           </li>
           <li>
             <a href="/">Services</a>
