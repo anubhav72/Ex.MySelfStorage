@@ -55,6 +55,17 @@ const ManageUsers = () => {
             <form onSubmit={handleSubmit}>
               <TextField
                 className="mt-3"
+                label="Username"
+                type="text"
+                variant="outlined"
+                id="username"
+                value={values.username}
+                onChange={handleChange}
+                helperText={errors.username}
+                error={Boolean(errors.username)}
+              />
+              <TextField
+                className="mt-3"
                 label="Email Address"
                 variant="outlined"
                 id="email"
@@ -63,6 +74,18 @@ const ManageUsers = () => {
                 helperText={errors.email}
                 error={Boolean(errors.email)}
               />
+              <TextField
+                className="mt-3"
+                label="mobile"
+                type="number"
+                variant="outlined"
+                id="mobile"
+                value={values.mobile}
+                onChange={handleChange}
+                helperText={errors.mobile}
+                error={Boolean(errors.mobile)}
+              />
+
               <TextField
                 className="mt-3"
                 label="Password"
@@ -74,25 +97,9 @@ const ManageUsers = () => {
                 helperText={errors.password}
                 error={Boolean(errors.password)}
               />
-              <TextField
-                className="mt-3"
-                label="Username"
-                type="text"
-                variant="outlined"
-                id="username"
-                value={values.username}
-                onChange={handleChange}
-              />
-              <TextField
-                className="mt-3"
-                label="Age"
-                type="number"
-                variant="outlined"
-                id="age"
-                value={values.age}
-                onChange={handleChange}
-              />
-
+            
+              
+              
               <Button type="submit" className="mt-3" variant="contained">
                 Update User
               </Button>
@@ -114,7 +121,7 @@ const ManageUsers = () => {
   const displayUserData = () => {
     if (!loading) {
       return userList.map(
-        ({  createdAt, username, password, email, _id }) => (
+        ({  createdAt, username, password, email, mobile, _id }) => (
           <Accordion>
             <AccordionSummary expandIcon={<ExpandMore />}>
               {username}
@@ -122,8 +129,9 @@ const ManageUsers = () => {
             <AccordionDetails>
 
               <h5>Username : {username}</h5>
-              <h5>Password : {password}</h5>
               <h5>Email : {email}</h5>
+              <h5>Mobile No : {mobile}</h5>
+              <h5>Password : {password}</h5>
               <h5>Added On : {createdAt}</h5>
 
               <Fab
@@ -142,6 +150,7 @@ const ManageUsers = () => {
                     createdAt,
                     password,
                     email,
+                    mobile,
                     _id,
                   });
                 }}

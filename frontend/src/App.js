@@ -9,11 +9,13 @@ import Main from "./components/main";
 import Dashboard from "./components/admin/dashboard";
 import Profile from "./components/admin/profile";
 import AddLocation from "./components/admin/addLocation";
+
 // import Header from "./components/main/header";
-import NavBar from "./components/main/navBar";
+// import NavBar from "./components/main/navBar";
 import BrowseLocation from "./components/main/browseLocation";
 import Home from "./components/main/home";
-import ManageUsers from "./components/admin/manageuser";
+import ManageUsers from "./components/admin/manageUser";
+import ManageLocations from "./components/admin/manageLocation";
 
 function App() {
   return (
@@ -25,6 +27,7 @@ function App() {
           <Route element={<AddLocation />} path="addLocation" />
           {/* <Route element={<ManageLoca />} path="managelocation" /> */}
           <Route element={<ManageUsers />} path="manageUser" />
+          <Route element={<ManageLocations />} path="manageLocation" />
         </Route>
 
         <Route element={<User />} path="user"></Route>
@@ -34,8 +37,9 @@ function App() {
           <Route element={<SignIn />} path="signIn" />
           <Route element={<BrowseLocation />} path="browseLocation" />
           <Route element={<ResetPassword />} path="resetPassword" />
+          
         </Route>
-
+        
         <Route element={<Navigate to="/main/home" />} path="/"></Route>
       </Routes>
     </BrowserRouter>

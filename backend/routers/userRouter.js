@@ -11,6 +11,8 @@ router.get("/home", (req, res) => {
   res.send("you have found user Home");
 });
 
+// for firsttime login
+
 router.post("/add", (req, res) => {
   console.log(req.body);
 
@@ -46,6 +48,7 @@ router.get("/getall", (req, res) => {
       res.status(500).json(err);
     });
 });
+// router for authentication 
 
 router.post("/authenticate", (req, res) => {
   const formdata = req.body;
@@ -66,6 +69,8 @@ router.post("/authenticate", (req, res) => {
     });
 });
 
+// router for delete userid 
+
 router.delete("/delete/:id", (req, res) => {
   Model.findByIdAndDelete(req.params.id)
     .then((data) => {
@@ -77,7 +82,7 @@ router.delete("/delete/:id", (req, res) => {
       res.status(500).json(err);
     });
 });
-
+// router for update userid 
 router.put("/update/:id", (req, res) => {
   Model.findByIdAndUpdate(req.params.id, req.body)
     .then((data) => {
@@ -90,4 +95,5 @@ router.put("/update/:id", (req, res) => {
     });
 });
 
+// for export module
 module.exports = router;

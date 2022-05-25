@@ -19,7 +19,7 @@ router.post("/add", (req, res) => {
       });
   });
 
-  router.get("/getall", (req, res) => {
+  router.get("/admin/getall", (req, res) => {
     Model.find({})
       .then((data) => {
         console.log("data saved");

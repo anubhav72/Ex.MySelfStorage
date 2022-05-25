@@ -27,6 +27,11 @@ const Admin = () => {
       icon: <ManageAccountsIcon />,
       link: "/admin/manageUser",
     },
+    {
+      name: "manageLocation",
+      icon: <ManageAccountsIcon />,
+      link: "/admin/manageLocation",
+    },
   ];
 
   return (
