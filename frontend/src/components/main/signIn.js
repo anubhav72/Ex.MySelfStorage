@@ -61,9 +61,8 @@ const SignIn = () => {
     });
   };
   return (
-    <>
-      <NavBar />
-      <div className="signin-container">
+    <div style={{ paddingTop: "15rem" }}>
+      <div className="signin-container" style={{ margin: "auto" }}>
         <div className="one-signin-con">
           <img src={login_mobile} alt="" />
           <div className="account-signin">
@@ -128,7 +127,7 @@ const SignIn = () => {
           </Formik>
         </div>
       </div>
-    </>
+    </div>
   );
 };
 export default SignIn;

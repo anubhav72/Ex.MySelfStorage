@@ -130,7 +130,7 @@ const ManageLocations = () => {
   const displayLocationData = () => {
     if (!loading) {
       return userList.map(
-        ({ createdAt,  city, address, totalSpace, price, _id }) => (
+        ({ createdAt, city, address, totalSpace, price, _id }) => (
           <Accordion>
             <AccordionSummary expandIcon={<ExpandMore />}>
               {city}
@@ -140,8 +140,11 @@ const ManageLocations = () => {
               <h5>Address : {address}</h5>
               <h5>Totalspace : {totalSpace}</h5>
               <h5>Price : {price}</h5>
-              
-              <h5>Added On : {createdAt}</h5>
+
+              <h5>
+                Added On : {new Date(createdAt).toLocaleDateString()}{" "}
+                {new Date(createdAt).toLocaleTimeString()}
+              </h5>
 
               <Fab
                 onClick={(e) => deleteLocation(_id)}

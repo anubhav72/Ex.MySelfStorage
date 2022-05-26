@@ -17,12 +17,21 @@ import Home from "./components/main/home";
 import ManageUsers from "./components/admin/manageUser";
 import ManageLocations from "./components/admin/manageLocation";
 import BookingSpace from "./components/main/bookingSpace";
+import AdminAuthorisor from "./components/adminAuth";
+import Authorisor from "./components/authenticator";
 
 function App() {
   return (
     <BrowserRouter>
       <Routes>
-        <Route element={<Admin />} path="admin">
+        <Route
+          element={
+            <AdminAuthorisor>
+              <Admin />
+            </AdminAuthorisor>
+          }
+          path="admin"
+        >
           <Route element={<Dashboard />} path="dashboard" />
           <Route element={<Profile />} path="profile" />
           <Route element={<AddLocation />} path="addLocation" />
@@ -31,7 +40,14 @@ function App() {
           <Route element={<ManageLocations />} path="manageLocation" />
         </Route>
 
-        <Route element={<User />} path="user"></Route>
+        <Route
+          element={
+            <Authorisor>
+              <User />
+            </Authorisor>
+          }
+          path="user"
+        ></Route>
         <Route element={<Main />} path="main">
           <Route element={<SignUp />} path="signUp" />
           <Route element={<Home />} path="home" />
