@@ -19,6 +19,7 @@ import ManageLocations from "./components/admin/manageLocation";
 import BookingSpace from "./components/main/bookingSpace";
 import AdminAuthorisor from "./components/adminAuth";
 import Authorisor from "./components/authenticator";
+import BookLocation from "./components/main/bookLocation";
 
 function App() {
   return (
@@ -53,7 +54,7 @@ function App() {
           <Route element={<Home />} path="home" />
           <Route element={<SignIn />} path="signIn" />
           <Route element={<BrowseLocation />} path="browseLocation" />
-          <Route element={<BookingSpace />} path="bookingSpace" />
+          <Route element={<BookLocation />} path="book" />
           <Route element={<ResetPassword />} path="resetPassword" />
         </Route>
 
