@@ -1,82 +1,82 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
+import { useNavigate, useParams } from "react-router-dom";
+import app_config from "../../config";
 import "./resource/book.css";
 const BookLocation = () => {
+  const navigate = useNavigate();
+
+  const { id } = useParams();
+  const [locData, setLocData] = useState(null);
+  const [loading, setLoading] = useState(true);
+
+  const url = app_config.backend_url;
+  const [currentUser, setCurrentUser] = useState(
+    JSON.parse(sessionStorage.getItem("user"))
+  );
+
+  const fetchData = () => {
+    fetch(url + "/slide/getbyid/" + id).then((res) => {
+      if (res.status === 200) {
+        res.json().then((data) => {
+          console.log(data);
+          setLocData(data);
+          setLoading(false);
+        });
+      }
+    });
+  };
+
+  useEffect(() => {
+    fetchData();
+  }, []);
+
   return (
-    <div class="book-con">
-      <div class="book-main">
-        <div class="top-con">
-          <h1>Booking Summary</h1>
-        </div>
-        <div class="bot-con">
-          <div class="book-first">
-            <div class="book-info">
-              <h3>Tell us a bit about</h3>
-              <p>
-                if you are not login{" "}
-                <span>
-                  <a href="">click here</a>
-                </span>
-              </p>
-            </div>
-            <form action="">
-              <div class="f-sec">
-                <div class="f-1-sec">
-                  <label for="">First name</label>
-                  <input type="text" />
-                </div>
-                <div class="f-1-sec">
-                  <label for="">Last name</label>
-                  <input type="text" />
-                </div>
-              </div>
-              <div class="s-sec">
-                <div class="s-2-sec">
-                  <label for="">Phone No</label>
-                  <input type="text" />
-                </div>
-                <div class="s-2-sec">
-                  <label for="">City</label>
-                  <input type="text" />
-                </div>
-              </div>
-              <div class="t-sec">
-                <div class="t-3-sec">
-                  <label for="">Starting Date</label>
-                  <input type="date" />
-                </div>
-                <div class="t-3-sec">
-                  <label for="">Ending Date</label>
-                  <input type="date" />
-                </div>
-              </div>
-            </form>
+    <div style={{ height: "100vh" }}>
+      <div className="container" style={{ paddingTop: "10rem" }}>
+        <div className="card">
+          <div className="card-header">
+            <h3 className="mb-0">Booking Summary</h3>
           </div>
-          <div class="book-second">
-            <div class="book-sub-1">
-              <h3>
-                City : <span> Lucknow</span>
-              </h3>
-              <h3>
-                Address :{" "}
-                <span>
-                  Pratibha Jewellers, RWWV+PRW, Near Basant Cinema, Sushanpura,
-                  Hazratganj, Lucknow, Uttar Pradesh 226001
-                </span>
-              </h3>
-              <h3>
-                Space : <span>6 * 4 sqft</span>
-              </h3>
-              <h3>
-                Date : <span>Lucknow</span>
-              </h3>
-              <h3>
-                total Price : <span>500 rs</span>
-              </h3>
-            </div>
-            <div class="book-sub-2">
-              <button>Proceed to payment</button>
+          <div className="card-body">
+            <div className="row">
+              <div className="col-md-6">
+                <div class="t-sec">
+                  <div class="t-3-sec">
+                    <label for="">Starting Date</label>
+                    <input type="date" />
+                  </div>
+                  <div class="t-3-sec">
+                    <label for="">Ending Date</label>
+                    <input type="date" />
+                  </div>
+                </div>
+              </div>
+              <div className="col-md-6">
+                <div class="book-sub-1">
+                  <h3>
+                    City : <span> Lucknow</span>
+                  </h3>
+                  <h3>
+                    Address :{" "}
+                    <span>
+                      Pratibha Jewellers, RWWV+PRW, Near Basant Cinema,
+                      Sushanpura, Hazratganj, Lucknow, Uttar Pradesh 226001
+                    </span>
+                  </h3>
+                  <h3>
+                    Space : <span>6 * 4 sqft</span>
+                  </h3>
+                  <h3>
+                    Date : <span>Lucknow</span>
+                  </h3>
+                  <h3>
+                    total Price : <span>500 rs</span>
+                  </h3>
+                </div>
+              </div>
             </div>
           </div>
+          <div className="card-footer"></div>
         </div>
       </div>
     </div>

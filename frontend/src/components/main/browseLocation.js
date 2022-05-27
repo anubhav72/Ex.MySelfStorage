@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import app_config from "../../config";
 import NavBar from "./navBar";
-// import "./resource/browselocation.css";                    
+// import "./resource/browselocation.css";
 
 const BrowseLocation = () => {
   const [datalist, setDatalist] = useState([]);
@@ -78,7 +78,12 @@ const BrowseLocation = () => {
                   <p>City : {data.city}</p>
                   <p>Price : {data.price}</p>
 
-                  <button className="btn btn-primary ">Book Now</button>
+                  <button
+                    className="btn btn-primary"
+                    onClick={(e) => navigate("/main/book/" + data._id)}
+                  >
+                    Book Now
+                  </button>
                 </div>
               </div>
             </div>
@@ -89,7 +94,7 @@ const BrowseLocation = () => {
   };
 
   return (
-    <div className="pt-5" style={{ background: "#eee" }}>
+    <div className="pt-5" style={{ background: "#ffc2ba" }}>
       <div className="container">
         {/* <NavBar /> */}
         {/* <div className="browse-con">

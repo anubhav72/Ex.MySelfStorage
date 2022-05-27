@@ -47,7 +47,7 @@ const SignIn = () => {
             return;
           } else {
             sessionStorage.setItem("user", JSON.stringify(data));
-            navigate("/user/home");
+            navigate("/main/browseLocation");
             return;
           }
         });

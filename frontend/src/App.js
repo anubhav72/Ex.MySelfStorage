@@ -54,7 +54,7 @@ function App() {
           <Route element={<Home />} path="home" />
           <Route element={<SignIn />} path="signIn" />
           <Route element={<BrowseLocation />} path="browseLocation" />
-          <Route element={<BookLocation />} path="book" />
+          <Route element={<BookLocation />} path="book/:id" />
           <Route element={<ResetPassword />} path="resetPassword" />
         </Route>
 
