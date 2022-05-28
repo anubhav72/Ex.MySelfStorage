@@ -22,6 +22,7 @@ import Authorisor from "./components/authenticator";
 import BookLocation from "./components/main/bookLocation";
 import { Elements } from "@stripe/react-stripe-js";
 import { loadStripe } from "@stripe/stripe-js";
+import ManageBookings from "./components/user/manageBookings";
 
 function App() {
   const stripe = loadStripe("pk_test_Vmvhpm2TASsGcgF4RcyQfkF000KwucQJR1");
@@ -51,7 +52,9 @@ function App() {
             </Authorisor>
           }
           path="user"
-        ></Route>
+        >
+          <Route element={<ManageBookings />} path="managebooking" />
+        </Route>
         <Route element={<Main />} path="main">
           <Route element={<SignUp />} path="signUp" />
           <Route element={<Home />} path="home" />

@@ -51,7 +51,7 @@ const BookLocation = () => {
     const requestOptions = {
       method: "POST",
       headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ amount: 150 * 100 }),
+      body: JSON.stringify({ amount: location.price * 100 }),
     };
     return fetch(url + "/create-payment-intent", requestOptions).then(
       (response) => response.json()
@@ -59,7 +59,29 @@ const BookLocation = () => {
   };
 
   const checkoutSubmit = () => {
-    console.log("submitted");
+    fetch(url + "/booking/add/", {
+      method: "POST",
+      body: JSON.stringify({
+        location: location._id,
+        user: currentUser._id,
+        createdAt: new Date(),
+      }),
+      headers: {
+        "Content-Type": "application/json",
+      },
+    }).then((res) => {
+      if (res.status === 200) {
+        res.json().then((data) => {
+          console.log(data);
+          Swal.fire({
+            icon: "success",
+            title: "Success",
+            text: "Location Booked Successfully",
+          });
+          navigate("/user/managebooking");
+        });
+      }
+    });
   };
 
   const payMoney = async (e) => {
@@ -94,7 +116,6 @@ const BookLocation = () => {
     } else {
       if (paymentResult.paymentIntent.status === "succeeded") {
         console.log(paymentResult);
-
         checkoutSubmit();
       }
     }

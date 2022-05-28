@@ -1,7 +1,7 @@
 // importing express
 const express = require("express");
 
-const Model = require("../models/locationModel");
+const Model = require("../models/bookingModel");
 
 // create router
 const router = express.Router();

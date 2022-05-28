@@ -14,7 +14,7 @@ const ManageBookings = () => {
   const [loading, setLoading] = useState(true);
 
   const fetchData = () => {
-    fetch(url + "/location/getbyuser/" + currentUser._id).then((res) => {
+    fetch(url + "/booking/getbyuser/" + currentUser._id).then((res) => {
       if (res.status === 200) {
         res.json().then((data) => {
           setBookings(data);
@@ -51,6 +51,8 @@ const ManageBookings = () => {
   return (
     <div>
       <div className="container">
+        <h1 className="mt-5">Manage Bookings</h1>
+        <hr />
         <div className="row">{showData()}</div>
       </div>
     </div>
