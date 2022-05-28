@@ -24,9 +24,7 @@ import { Elements } from "@stripe/react-stripe-js";
 import { loadStripe } from "@stripe/stripe-js";
 
 function App() {
-  const stripe = loadStripe(
-    "pk_test_51L40E8SIL78L4RMKt7EF5D080DPTTWCBmIkPCcyJiK4fKhKpG54HXnufR75qXn4WfLJAeCxGyZmIhuu0WT45HJ1300OFr7hodc"
-  );
+  const stripe = loadStripe("pk_test_Vmvhpm2TASsGcgF4RcyQfkF000KwucQJR1");
   return (
     <BrowserRouter>
       <Routes>
