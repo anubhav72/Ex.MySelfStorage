@@ -5,7 +5,7 @@ import google from "./resource/google.png";
 import login_mobile from "./resource/loginmobile.png";
 import Swal from "sweetalert2";
 import * as Yup from "yup";
-import NavBar from "./navBar";
+// import NavBar from "./navBar";
 import { useNavigate } from "react-router-dom";
 import app_config from "../../config";
 
@@ -61,8 +61,8 @@ const SignIn = () => {
     });
   };
   return (
-    <div style={{ paddingTop: "15rem" }}>
-      <div className="signin-container" style={{ margin: "auto" }}>
+    <div className="signin-body">
+      <div className="signin-container" >
         <div className="one-signin-con">
           <img src={login_mobile} alt="" />
           <div className="account-signin">

@@ -114,7 +114,7 @@
   }
   
   /*Stying for small screens*/
-  @media screen and (max-width: 1022px) {
+  @media screen and (max-width: 1125px) {
     nav {
       position: fixed;
       z-index: 3;
