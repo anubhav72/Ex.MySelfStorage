@@ -20,8 +20,13 @@ import BookingSpace from "./components/main/bookingSpace";
 import AdminAuthorisor from "./components/adminAuth";
 import Authorisor from "./components/authenticator";
 import BookLocation from "./components/main/bookLocation";
+import { Elements } from "@stripe/react-stripe-js";
+import { loadStripe } from "@stripe/stripe-js";
 
 function App() {
+  const stripe = loadStripe(
+    "pk_test_51L40E8SIL78L4RMKt7EF5D080DPTTWCBmIkPCcyJiK4fKhKpG54HXnufR75qXn4WfLJAeCxGyZmIhuu0WT45HJ1300OFr7hodc"
+  );
   return (
     <BrowserRouter>
       <Routes>
@@ -54,7 +59,16 @@ function App() {
           <Route element={<Home />} path="home" />
           <Route element={<SignIn />} path="signIn" />
           <Route element={<BrowseLocation />} path="browseLocation" />
-          <Route element={<BookLocation />} path="book/:id" />
+          <Route
+            element={
+              <Authorisor>
+                <Elements stripe={stripe}>
+                  <BookLocation />
+                </Elements>
+              </Authorisor>
+            }
+            path="book/:id"
+          />
           <Route element={<ResetPassword />} path="resetPassword" />
         </Route>
 

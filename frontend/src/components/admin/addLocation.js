@@ -1,12 +1,14 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import "./resource/addlocation.css";
 import { Formik } from "formik";
 import app_config from "../../config";
 import Swal from "sweetalert2";
 import * as Yup from "yup";
+import { useParams } from "react-router-dom";
 
 export default function AddLocation() {
   const url = app_config.backend_url;
+
   const myValidation = Yup.object().shape({
     city: Yup.string()
       .min(1, "enter a city name")

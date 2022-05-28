@@ -28,14 +28,6 @@ router.post("/add", (req, res) => {
     });
 });
 
-router.get("/getbyid/:id", (req, res) => {
-  console.log("request on getbyid");
-
-  console.log(req.params.id);
-
-  res.send("you have requested on /getbyid in user");
-});
-
 // router for show all data of database
 router.get("/getall", (req, res) => {
   Model.find({})
@@ -48,20 +40,13 @@ router.get("/getall", (req, res) => {
       res.status(500).json(err);
     });
 });
-// router for authentication
 
-router.post("/authenticate", (req, res) => {
-  const formdata = req.body;
-
-  Model.findOne({ email: formdata.email, password: formdata.password })
+router.get("/getbyuser/:id", (req, res) => {
+  Model.find({ user: req.params.id })
+    .populate("user")
+    .populate("location")
     .then((data) => {
-      if (data) {
-        console.log("login success");
-        res.status(200).json(data);
-      } else {
-        console.log("login failed");
-        res.status(400).json({ message: "failed" });
-      }
+      res.status(200).json(data);
     })
     .catch((err) => {
       console.error(err);

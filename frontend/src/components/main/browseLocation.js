@@ -70,8 +70,17 @@ const BrowseLocation = () => {
         <div className="">
           <div className="card mt-5">
             <div className="row">
-              <div className="col-md-4"></div>
-              <div className="col-md-8">
+              <div className="col-md-3">
+                <div
+                  style={{
+                    background:
+                      "url(https://shg-prd.azureedge.net/-/media/shurgard/general/unit-pictures/01dot5-tb.jpg?extension=webp&w=126&h=108&hash=CBB96A06060A707BF07B4250584BB5C8)",
+                    backgroundSize: "cover",
+                    height: "100%",
+                  }}
+                ></div>
+              </div>
+              <div className="col-md-9">
                 <div className="card-body">
                   <h3>Space Available : {data.totalSpace}</h3>
                   <p>Address : {data.address}</p>
