@@ -5,8 +5,7 @@ const LocationRouter = require("./routers/locationRouter");
 const BookingRouter = require("./routers/bookingRouter");
 const cors = require("cors");
 
-const stripe_sk =
-  "sk_test_51L40E8SIL78L4RMKmqqUWjRiH1fUv2QUV8PrcuYyCAT17BUN3a3JCiDJ6c6uzOy0Yc02O56m4732gP5SopNdY8bq00plMgCxeO";
+const stripe_sk = "sk_test_4ypbMh4aR9gRNnUkQCwgOyCT00rSoAbXzZ";
 const stripe = require("stripe")(stripe_sk);
 
 // initialize express

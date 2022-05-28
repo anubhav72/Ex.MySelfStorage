@@ -23,6 +23,17 @@ const BrowseLocation = () => {
     });
   };
 
+  //   const searchProduct = e => {
+  //     fetch(url + "/location/getall")
+  //         .then(data => {
+  //           setDatalist(data);
+  //             let newList = data.filter(equipment => (equipment.name.toLowerCase().includes(keyword.toLowerCase())))
+  //             console.log(newList);
+  //             setEquipmentList(newList);
+  //             console.log(data);
+  //         });
+  // }
+
   const [filter, setFilter] = useState("");
 
   useEffect(() => {
