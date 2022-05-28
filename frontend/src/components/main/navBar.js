@@ -46,7 +46,7 @@ const NavBar = () => {
           </li>
         </ul>
       </nav>
-      <script src="nav.js"></script>
+      <script src="./resource/nav.js"></script>
     </>
   );
 };
