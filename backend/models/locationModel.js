@@ -5,7 +5,7 @@ const schema = new mongoose.Schema({
   city: String,
   address: String,
   totalSpace:String,
-  price: String,
+  price: Number,
   createdAt: { type: Date, default: new Date() },
 });
 

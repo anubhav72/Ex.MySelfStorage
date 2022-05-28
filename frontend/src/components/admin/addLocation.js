@@ -19,7 +19,7 @@ export default function AddLocation() {
       .max(200, "Too Long!")
       .required("Address required"),
     totalSpace: Yup.string().required("space required"),
-    price: Yup.string().required("Price Required"),
+    price: Yup.number().required("Price Required"),
   });
   return (
     <>
