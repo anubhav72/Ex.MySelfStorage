@@ -16,7 +16,7 @@ import ListItemIcon from "@mui/material/ListItemIcon";
 import ListItemText from "@mui/material/ListItemText";
 import InboxIcon from "@mui/icons-material/MoveToInbox";
 import MailIcon from "@mui/icons-material/Mail";
-import ManageAccountsIcon from '@mui/icons-material/ManageAccounts';
+import ManageAccountsIcon from "@mui/icons-material/ManageAccounts";
 import { useNavigate } from "react-router-dom";
 import { AppRegistration, Logout, VerifiedUser } from "@mui/icons-material";
 import { Menu, MenuItem, Tooltip } from "@mui/material";
@@ -108,8 +108,8 @@ export default function Sidebar({ sidebarOptions, children, title }) {
   return (
     <Box sx={{ display: "flex" }}>
       <CssBaseline />
-      <AppBar position="fixed" open={open} >
-        <Toolbar style={{ height: '36px' }}>
+      <AppBar position="fixed" open={open}>
+        <Toolbar style={{ height: "36px" }}>
           <IconButton
             color="inherit"
             aria-label="open drawer"
@@ -127,18 +127,6 @@ export default function Sidebar({ sidebarOptions, children, title }) {
           </Typography>
           <Box sx={{ flexGrow: 1 }} />
 
-          <Tooltip title="User Options">
-            <IconButton
-              sx={{ ml: 3 }}
-              color="inherit"
-              onClick={(e) => {
-                setUserMenuPos(e.currentTarget);
-              }}
-            >
-              <VerifiedUser />
-            </IconButton>
-          </Tooltip>
-
           <Menu
             anchorEl={userMenuPos}
             open={Boolean(userMenuPos)}
@@ -153,10 +141,19 @@ export default function Sidebar({ sidebarOptions, children, title }) {
             <Divider />
             <MenuItem>Signup</MenuItem>
           </Menu>
-
-          <IconButton sx={{ ml: 3 }} color="inherit">
-            <Logout />
-          </IconButton>
+          <Tooltip title="User Options">
+            <IconButton
+              sx={{ ml: 3 }}
+              color="inherit"
+              onClick={(e) => {
+                sessionStorage.removeItem("user");
+                sessionStorage.removeItem("admin");
+                navigate("/main/signIn");
+              }}
+            >
+              <Logout />
+            </IconButton>
+          </Tooltip>
         </Toolbar>
       </AppBar>
       <Drawer variant="permanent" open={open}>

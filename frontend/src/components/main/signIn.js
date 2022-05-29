@@ -23,7 +23,7 @@ const SignIn = () => {
       .required("Enter Email"),
 
     password: Yup.string()
-      .min(6, "Too Short!!")
+      .min(5, "Too Short!!")
       .max(12, "Very Long To Remember")
       .required("Password Required"),
   });
@@ -62,7 +62,7 @@ const SignIn = () => {
   };
   return (
     <div className="signin-body">
-      <div className="signin-container" >
+      <div className="signin-container">
         <div className="one-signin-con">
           <img src={login_mobile} alt="" />
           <div className="account-signin">

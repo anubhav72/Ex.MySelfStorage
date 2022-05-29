@@ -2,7 +2,7 @@ const mongoose = require("mongoose");
 
 const url =
   // "mongodb+srv://lucifer:milucifer@cluster0.kvzqw.mongodb.net/backend-selfstorage?retryWrites=true&w=majority";
-  "mongodb+srv://mmm:mmm@cluster0.gvyon.mongodb.net/ustore?retryWrites=true&w=majority";
+  "mongodb+srv://mmm:mmm@cluster0.gvyon.mongodb.net/selfstorage?retryWrites=true&w=majority";
 
 //   this will return promise
 mongoose
