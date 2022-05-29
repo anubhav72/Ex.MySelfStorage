@@ -23,13 +23,13 @@ const AdminProfile = (props) => {
   const url = app_config.backend_url;
 
   useEffect(() => {
-    fetch(url + "/user/getbyid/" + currentUser._id)
-      .then((res) => res.json())
-      .then((data) => {
-        console.log(data);
-        setUpdateForm(data);
-      });
-    console.log(currentUser);
+    // fetch(url + "/user/getbyid/" + currentUser._id)
+    //   .then((res) => res.json())
+    //   .then((data) => {
+    //     console.log(data);
+    //     setUpdateForm(data);
+    //   });
+    // console.log(currentUser);
   }, []);
 
   const onFormSubmit = (value, { setSubmitting }) => {
@@ -133,11 +133,11 @@ const AdminProfile = (props) => {
                   <form onSubmit={handleSubmit}>
                     <TextField
                       className="mt-4 w-100"
-                      label="Full Name"
+                      label="Username"
                       variant="filled"
-                      name="fullname"
+                      name="username"
                       onChange={handleChange}
-                      value={values.fullname}
+                      value={values.username}
                     />
                     <TextField
                       className="mt-4 w-100"
@@ -149,11 +149,11 @@ const AdminProfile = (props) => {
                     />
                     <TextField
                       className="mt-4 w-100"
-                      label="Age"
+                      label="Mobile"
                       variant="filled"
-                      name="age"
+                      name="mobile"
                       onChange={handleChange}
-                      value={values.age}
+                      value={values.mobile}
                     />
                     <TextField
                       className="mt-4 w-100"

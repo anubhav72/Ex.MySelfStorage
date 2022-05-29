@@ -3,6 +3,7 @@ const express = require("express");
 const UserRouter = require("./routers/UserRouter");
 const LocationRouter = require("./routers/locationRouter");
 const BookingRouter = require("./routers/bookingRouter");
+const UtilRouter = require("./routers/utils");
 const cors = require("cors");
 
 const stripe_sk = "sk_test_4ypbMh4aR9gRNnUkQCwgOyCT00rSoAbXzZ";
@@ -24,6 +25,9 @@ app.use(cors({ origin: ["http://localhost:3000"] }));
 app.use("/user", UserRouter);
 app.use("/location", LocationRouter);
 app.use("/booking", BookingRouter);
+app.use("/util", UtilRouter);
+
+app.use(express.static("./static"));
 
 // endpoint or route
 app.get("/", (req, res) => {

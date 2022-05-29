@@ -5,6 +5,7 @@ const schema = new mongoose.Schema({
   email: String,
   mobile: Number,
   password: String,
+  avatar: String,
   isAdmin: { type: Boolean, default: false },
   createAt: { type: Date, default: new Date() },
 });

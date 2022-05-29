@@ -61,7 +61,7 @@ const NavBar = () => {
             <a href="/">Home</a>
           </li>
           <li>
-            <a href="/">Solutions</a>
+            <NavLink to="/user/profile">Manage Profile</NavLink>
           </li>
           <li>
             <a href="browselocation">Browse Location</a>
@@ -72,18 +72,7 @@ const NavBar = () => {
           <li>
             <a href="/">Contact Us</a>
           </li>
-          <li>
-            <NavLink to="/main/signin">
-              <button class="nav-in">Sign In</button>
-            </NavLink>
-          </li>
-          <li>
-            <a href="signup">
-              <button class="nav-up" href="signup">
-                Sign Up
-              </button>
-            </a>
-          </li>
+
           {showLogout()}
         </ul>
       </nav>
