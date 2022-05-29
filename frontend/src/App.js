@@ -23,6 +23,7 @@ import BookLocation from "./components/main/bookLocation";
 import { Elements } from "@stripe/react-stripe-js";
 import { loadStripe } from "@stripe/stripe-js";
 import ManageBookings from "./components/user/manageBookings";
+import LoginAuthorisor from "./components/loginAuth";
 
 function App() {
   const stripe = loadStripe("pk_test_51L40E8SIL78L4RMKt7EF5D080DPTTWCBmIkPCcyJiK4fKhKpG54HXnufR75qXn4WfLJAeCxGyZmIhuu0WT45HJ1300OFr7hodc");
@@ -57,9 +58,23 @@ function App() {
           <Route element={<ManageBookings />} path="managebooking" />
         </Route>
         <Route element={<Main />} path="main">
-          <Route element={<SignUp />} path="signUp" />
+          <Route
+            element={
+              <LoginAuthorisor>
+                <SignUp />
+              </LoginAuthorisor>
+            }
+            path="signUp"
+          />
           <Route element={<Home />} path="home" />
-          <Route element={<SignIn />} path="signIn" />
+          <Route
+            element={
+              <LoginAuthorisor>
+                <SignIn />
+              </LoginAuthorisor>
+            }
+            path="signIn"
+          />
           <Route element={<BrowseLocation />} path="browseLocation" />
           <Route
             element={

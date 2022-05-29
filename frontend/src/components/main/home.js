@@ -124,7 +124,7 @@ const Home = () => {
                     class="img-fluid"
                     alt=""
                   />
-                  <p style="text-align: center;">CCTV Camera</p>
+                  <p style={{ textAlign: "center" }}>CCTV Camera</p>
                 </div>
                 <div class="swiper-slide">
                   <img
@@ -132,7 +132,7 @@ const Home = () => {
                     class="img-fluid"
                     alt=""
                   />
-                  <p style="text-align: center;">24*7 security</p>
+                  <p style={{ textAlign: "center" }}>24*7 security</p>
                 </div>
                 <div class="swiper-slide">
                   <img
@@ -140,7 +140,7 @@ const Home = () => {
                     class="img-fluid"
                     alt=""
                   />
-                  <p style="text-align: center;">fire control</p>
+                  <p style={{ textAlign: "center" }}>fire control</p>
                 </div>
                 <div class="swiper-slide">
                   <img
@@ -148,7 +148,7 @@ const Home = () => {
                     class="img-fluid"
                     alt=""
                   />
-                  <p style="text-align: center;">Esey Location</p>
+                  <p style={{ textAlign: "center" }}>Esey Location</p>
                 </div>
                 <div class="swiper-slide">
                   <img
@@ -156,7 +156,7 @@ const Home = () => {
                     class="img-fluid"
                     alt=""
                   />
-                  <p style="text-align: center;">pest control</p>
+                  <p style={{ textAlign: "center" }}>pest control</p>
                 </div>
               </div>
             </div>

@@ -7,9 +7,14 @@ import NavBar from "./navBar";
 const BrowseLocation = () => {
   const [datalist, setDatalist] = useState([]);
   const [loading, setLoading] = useState(true);
+  const [keyword, setKeyword] = useState("");
 
   const url = app_config.backend_url;
   const navigate = useNavigate();
+
+  const filters = ["City", "Space", "Price"];
+
+  const [selFilter, setSelFilter] = useState("");
 
   const fetchData = () => {
     fetch(url + "/location/getall").then((res) => {
@@ -40,10 +45,23 @@ const BrowseLocation = () => {
     fetchData();
   }, []);
 
+  const applySearch = () => {
+    fetch(url + "/location/getall").then((res) => {
+      if (res.status === 200) {
+        res.json().then((data) => {
+          let filtered = 
+          console.log(data);
+          setDatalist(data);
+          setLoading(false);
+        });
+      }
+    });
+  }
+
   const searchCard = () => {
     return (
-      <div className="">
-        <div className="card">
+      <div className="pt-5">
+        <div className="card ">
           <div className="card-header bg-white p-4">
             <div class="input-group rounded">
               <input
@@ -53,10 +71,12 @@ const BrowseLocation = () => {
                 placeholder="Search"
                 aria-label="Search"
                 aria-describedby="search-addon"
+                onChange={e => setKeyword(e.target.value)}
               />
               <span
                 class="input-group-text border-0 bg-white"
                 id="search-addon"
+                onClick={applySearch}
               >
                 <i class="fas fa-search"></i>
               </span>
@@ -66,7 +86,23 @@ const BrowseLocation = () => {
             <p className="text-muted">ADVANCED SEARCH</p>
             <div className="row">
               <div className="col-sm-3">
-                <button className="btn btn-outline-primary">City</button>
+                {filters.map((name) => {
+                  return (
+                    <>
+                      <button
+                        onClick={(e) => setSelFilter(name)}
+                        className={
+                          "btn btn-" +
+                          (name === selFilter ? "" : "outline-") +
+                          "primary"
+                        }
+                      >
+                        {name}
+                      </button>
+                      &nbsp; &nbsp;
+                    </>
+                  );
+                })}
               </div>
             </div>
           </div>
