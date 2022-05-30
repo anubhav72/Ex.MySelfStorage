@@ -24,6 +24,7 @@ import { Elements } from "@stripe/react-stripe-js";
 import { loadStripe } from "@stripe/stripe-js";
 import ManageBookings from "./components/user/manageBookings";
 import LoginAuthorisor from "./components/loginAuth";
+import UserProfile from "./components/user/profile";
 
 function App() {
   const stripe = loadStripe("pk_test_51L40E8SIL78L4RMKt7EF5D080DPTTWCBmIkPCcyJiK4fKhKpG54HXnufR75qXn4WfLJAeCxGyZmIhuu0WT45HJ1300OFr7hodc");
@@ -56,6 +57,7 @@ function App() {
           path="user"
         >
           <Route element={<ManageBookings />} path="managebooking" />
+          <Route element={<UserProfile />} path="profile" />
         </Route>
         <Route element={<Main />} path="main">
           <Route

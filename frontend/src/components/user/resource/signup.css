@@ -1,0 +1,194 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* body {
+    margin: 0%;
+    padding: 0%;
+    display: flex;
+    height: 100vh;
+    align-items: center;
+    justify-content: center;  
+    background-color: aqua;
+  } */
+
+/* =============Center comtainer============ */
+.center{
+  display: flex;
+  width: 100%;
+  height: 100vh;
+  /* margin-top: 40px; */
+  justify-content: center;
+  align-items: center;
+}
+.signup-container {
+  display: flex;
+  /* margin: 83px auto; */
+  height: 500px;
+  width: 700px;
+  margin: 60px 0px 0px 0px;
+  
+  background-color: rgb(214, 214, 175);
+  border: 0px solid red;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0px 0px 29px -5px rgba(0, 0, 0, 0.88);
+}
+/*================ First Sub container ==============*/
+.one-signup-con {
+  display: flex;
+  /* flex-direction: column; */
+  background-color: white;
+  width: 48%;
+}
+.one-signup-con img {
+  position: relative;
+  right: 63px;
+  bottom: 30px;
+}
+.signup-account {
+  position: relative;
+  top: 355px;
+  right: 450px;
+}
+
+.signup-account h1 {
+  margin: 0px;
+  width: 320px;
+  font-size: 40px;
+  color: #943ca3;
+  font-family: "Montserrat", sans-serif;
+}
+/* =================Second Sub container==================== */
+.two-signup-con {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #9553a0;
+  width: 52%;
+}
+.signup-form {
+  width: 80%;
+}
+.main-signup-head {
+  display: flex;
+  flex-direction: column;
+}
+
+.main-signup-head h1 {
+  color: white;
+  font-size: 32px;
+  /* font-family: 'Ubuntu', sans-serif; */
+  font-family: "Rubik", sans-serif;
+}
+.main-signup-head p {
+  margin: 4px 0px 14px 0px;
+  font-size: 13px;
+  color: white;
+  font-family: "Rubik", sans-serif;
+}
+.main-signup-head input {
+  padding: 6px 8px;
+  margin-bottom: 14px;
+  border: none;
+  border-radius: 4px;
+  font-size: 18px;
+  outline: none;
+  font-family: "Rubik", sans-serif;
+  box-shadow: 6px 7px 37px -9px rgba(0, 0, 0, 0.51);
+}
+.main-signup-head button {
+  padding: 6px 8px;
+  margin-top: 10px;
+  border: none;
+  border-radius: 4px;
+  font-size: 18px;
+  cursor: pointer;
+  font-family: "Rubik", sans-serif;
+  box-shadow: 6px 7px 37px -9px rgba(0, 0, 0, 0.51);
+  background-color: #6ccff6;
+}
+.signup-error {
+  font-size: 12px;
+  color: white;
+  margin: -13px 0px 3px 9px;
+}
+/* ==================main Form start hear==================== */
+
+.main-signup-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-family: "Rubik", sans-serif;
+}
+.signup-google {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.signup-form img {
+  height: 27px;
+  width: 27px;
+}
+.signup-google button {
+  font-size: 15px;
+  display: flex;
+  align-items: center;
+  margin: 0%;
+  padding: 3px 62px;
+  border: 1px solid black;
+  border-radius: 4px;
+  background-color: white;
+  box-shadow: 6px 7px 37px -9px rgba(0, 0, 0, 0.51);
+}
+.main-signup-info a {
+  text-decoration: none;
+  color: #f7ce5b;
+}
+.main-signup-info p {
+  margin: 12px 0px;
+}
+@media screen and (min-device-width: 0px) and (max-device-width: 685px) {
+  body {
+    background-color: aquamarine;
+  }
+  .signup-container {
+    width: 350px;
+  }
+  .one-signup-con {
+    display: none;
+  }
+  .two-signup-con {
+    width: 100%;
+    background-color: aliceblue;
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' version='1.1' xmlns:xlink='http://www.w3.org/1999/xlink' xmlns:svgjs='http://svgjs.com/svgjs' width='350' height='500' preserveAspectRatio='none' viewBox='0 0 350 500'%3e%3cg mask='url(%26quot%3b%23SvgjsMask1041%26quot%3b)' fill='none'%3e%3cpath d='M164.925%2c170.741C192.46%2c169.026%2c212.5%2c146.471%2c224.524%2c121.641C234.942%2c100.127%2c231.468%2c76.341%2c221.059%2c54.823C208.681%2c29.235%2c193.343%2c-0.947%2c164.925%2c-1.563C135.99%2c-2.19%2c118.604%2c27.071%2c104.411%2c52.294C90.599%2c76.839%2c78.099%2c104.883%2c90.912%2c129.963C104.647%2c156.848%2c134.793%2c172.618%2c164.925%2c170.741' fill='rgba(71%2c 18%2c 183%2c 0.51)' class='triangle-float2'%3e%3c/path%3e%3cpath d='M28.679%2c169.503C42.08%2c169.41%2c53.101%2c160.726%2c60.403%2c149.489C68.604%2c136.87%2c76.29%2c121.06%2c68.544%2c108.157C60.914%2c95.446%2c43.504%2c96.674%2c28.679%2c96.643C13.771%2c96.612%2c-3.714%2c95.262%2c-11.475%2c107.99C-19.405%2c120.996%2c-12.142%2c137.177%2c-3.815%2c149.933C3.593%2c161.281%2c15.127%2c169.597%2c28.679%2c169.503' fill='rgba(71%2c 18%2c 183%2c 0.51)' class='triangle-float1'%3e%3c/path%3e%3cpath d='M318.105%2c453.758C338.024%2c454.833%2c357.883%2c446.163%2c368.191%2c429.085C378.822%2c411.472%2c379.149%2c388.631%2c367.755%2c371.502C357.324%2c355.82%2c336.883%2c352.339%2c318.105%2c353.788C302.022%2c355.029%2c288.362%2c364.37%2c280.163%2c378.262C271.807%2c392.42%2c269.201%2c409.451%2c276.583%2c424.14C284.765%2c440.421%2c299.91%2c452.776%2c318.105%2c453.758' fill='rgba(71%2c 18%2c 183%2c 0.51)' class='triangle-float2'%3e%3c/path%3e%3cpath d='M291.997%2c600.562C320.417%2c601%2c340.732%2c575.949%2c354.142%2c550.888C366.656%2c527.502%2c371.569%2c499.694%2c358.243%2c476.761C344.973%2c453.924%2c318.41%2c443.918%2c291.997%2c443.94C265.627%2c443.962%2c238.837%2c453.869%2c225.941%2c476.871C213.274%2c499.465%2c220.882%2c526.173%2c233.084%2c549.022C246.258%2c573.69%2c264.035%2c600.131%2c291.997%2c600.562' fill='rgba(71%2c 18%2c 183%2c 0.51)' class='triangle-float1'%3e%3c/path%3e%3cpath d='M66.881%2c641.832C104.215%2c641.946%2c132.252%2c611.254%2c149.885%2c578.347C166.403%2c547.522%2c170.729%2c510.849%2c153.321%2c480.518C135.841%2c450.061%2c101.983%2c432.688%2c66.881%2c433.724C33.464%2c434.71%2c5.4%2c456.326%2c-11.153%2c485.372C-27.526%2c514.103%2c-30.009%2c548.25%2c-15.25%2c577.843C1.352%2c611.13%2c29.684%2c641.718%2c66.881%2c641.832' fill='rgba(71%2c 18%2c 183%2c 0.51)' class='triangle-float3'%3e%3c/path%3e%3cpath d='M254.633%2c233.472C282.492%2c235.027%2c310.737%2c224.163%2c325.393%2c200.42C340.74%2c175.558%2c341.368%2c143.184%2c325.519%2c118.64C310.762%2c95.787%2c281.8%2c89.448%2c254.633%2c90.84C230.151%2c92.095%2c207.432%2c104.009%2c195.304%2c125.313C183.3%2c146.398%2c184.682%2c171.944%2c196.35%2c193.216C208.521%2c215.404%2c229.365%2c232.061%2c254.633%2c233.472' fill='rgba(71%2c 18%2c 183%2c 0.51)' class='triangle-float3'%3e%3c/path%3e%3c/g%3e%3cdefs%3e%3cmask id='SvgjsMask1041'%3e%3crect width='350' height='500' fill='white'%3e%3c/rect%3e%3c/mask%3e%3cstyle%3e %40keyframes float1 %7b 0%25%7btransform: translate(0%2c 0)%7d 50%25%7btransform: translate(-10px%2c 0)%7d 100%25%7btransform: translate(0%2c 0)%7d %7d .triangle-float1 %7b animation: float1 5s infinite%3b %7d %40keyframes float2 %7b 0%25%7btransform: translate(0%2c 0)%7d 50%25%7btransform: translate(-5px%2c -5px)%7d 100%25%7btransform: translate(0%2c 0)%7d %7d .triangle-float2 %7b animation: float2 4s infinite%3b %7d %40keyframes float3 %7b 0%25%7btransform: translate(0%2c 0)%7d 50%25%7btransform: translate(0%2c -10px)%7d 100%25%7btransform: translate(0%2c 0)%7d %7d .triangle-float3 %7b animation: float3 6s infinite%3b %7d %3c/style%3e%3c/defs%3e%3c/svg%3e");
+  }
+  .main-signup-head input {
+    box-shadow: 6px 7px 37px -9px rgba(0, 0, 0, 0.51);
+  }
+  .main-signup-head button {
+    background-color: #9553a0;
+    box-shadow: 6px 7px 37px -9px rgba(0, 0, 0, 0.51);
+    color: aliceblue;
+  }
+  .main-signup-head h1 {
+    color: #000000;
+  }
+  .main-signup-head p {
+    color: #555555;
+  }
+  .signup-google button {
+    padding: 3px 57px;
+    box-shadow: 6px 7px 37px -9px rgba(0, 0, 0, 0.51);
+  }
+  .signup-error {
+    font-size: 12px;
+    color: rgb(0, 0, 0);
+    margin: -10px 0px 3px 9px;
+  }
+}

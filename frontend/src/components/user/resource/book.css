@@ -1,0 +1,216 @@
+.book-con {
+    display: flex;
+    width: 800px;
+    height: 500px;
+    margin: 0px auto;
+    align-items: center;
+    flex-direction: column;
+    background-color: aqua;
+  }
+  .book-main {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    justify-content: space-evenly;
+  }
+  
+  .top-con {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    border: 0.5px solid gray;
+    border-radius: 6px;
+    background-color: white;
+  }
+  .top-con h1 {
+    margin: 3px 0px;
+  }
+  .bot-con {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    border: 0.5px solid gray;
+    border-radius: 6px;
+    padding: 25px 0px;
+    background-color: white;
+  }
+  .book-first {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .book-info {
+    margin-left: 26px;
+    padding: 6px 0px;
+  }
+  .book-info h3 {
+    margin: 0px;
+    padding-bottom: 15px;
+  }
+  .book-info p {
+    margin: 0px;
+  }
+  .f-sec {
+    display: flex;
+    margin-bottom: 5px;
+    padding: 10px;
+    width: 100%;
+  }
+  
+  .f-sec label {
+    padding-bottom: 5px;
+  }
+  .f-sec input {
+    width: 190px;
+    padding: 6px 5px;
+    border: 0.5px solid darkred;
+    border-radius: 4px;
+    outline: none;
+  }
+  .f-1-sec {
+    display: flex;
+    flex-direction: column;
+    /* margin-left: 15px; */
+  }
+  
+  .s-sec {
+    display: flex;
+    margin-bottom: 5px;
+    padding: 10px;
+  }
+  .s-sec label {
+    padding-bottom: 5px;
+  }
+  .s-sec input {
+    width: 190px;
+    padding: 6px 5px;
+    border: 0.5px solid darkred;
+    border-radius: 4px;
+    outline: none;
+  }
+  .s-2-sec {
+    display: flex;
+    flex-direction: column;
+    /* margin-left: 15px; */
+  }
+  .s-2-sec {
+    display: flex;
+    flex-direction: column;
+  }
+  .t-sec {
+    display: flex;
+    padding: 10px;
+  }
+  .t-sec input {
+    width: 190px;
+    padding: 6px 5px;
+    border: 0.5px solid darkred;
+    outline: none;
+    border-radius: 4px;
+  }
+  .t-3-sec {
+    display: flex;
+    flex-direction: column;
+  }
+  .t-3-sec {
+    display: flex;
+    flex-direction: column;
+    /* margin-left: 15px; */
+  }
+  .t-sec label {
+    padding-bottom: 5px;
+  }
+  
+  .book-second {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .book-sub-1 {
+    margin: 13px 14px;
+    padding: 0px 9px;
+    background-color: aliceblue;
+    border-radius: 5px;
+  }
+  .book-sub-2 button {
+    padding: 7px 60px;
+    border-radius: 5px;
+    border: 0.5px solid black;
+    color: white;
+    background-color: #183fcd;
+  }
+  
+  @media only screen and (max-width: 820px) {
+    body {
+      background-color: lightblue;
+    }
+    .book-main {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+    }
+    .book-con {
+      display: flex;
+      width: 400px;
+      height: 920px;
+  
+      margin: 0px auto;
+      align-items: center;
+      flex-direction: column;
+      background-color: aqua;
+    }
+    .bot-con {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+    }
+    .book-first {
+      align-items: center;
+      justify-content: center;
+    }
+    .top-con {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      border: 0.5px solid gray;
+      border-radius: 6px;
+      background-color: white;
+    }
+    .f-sec {
+      display: flex;
+      flex-direction: column;
+      margin-bottom: 5px;
+      /* padding: 10px; */
+      width: 100%;
+    }
+    .f-sec input {
+      width: 100%;
+    }
+    .s-sec {
+      display: flex;
+      flex-direction: column;
+      margin-bottom: 5px;
+      padding: 10px;
+      width: 100%;
+    }
+    .s-sec input {
+      width: 100%;
+    }
+    .t-sec {
+      display: flex;
+      flex-direction: column;
+      margin-bottom: 5px;
+      padding: 10px;
+      width: 100%;
+    }
+    .t-sec input {
+      width: 100%;
+    }
+  }
+  
