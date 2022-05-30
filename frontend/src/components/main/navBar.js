@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { NavLink, useNavigate } from "react-router-dom";
 import "./resource/navbar.css";
 // import "./resource/nav";
 
@@ -49,7 +49,7 @@ const NavBar = () => {
     <>
       <nav>
         <div class="nav-head">
-          <h1>My SelfStorage</h1>
+          <h1><NavLink to="/main/home">My SelfStorage</NavLink></h1>
         </div>
         <div class="nav-ham">
           <div class="line1"></div>
@@ -58,13 +58,13 @@ const NavBar = () => {
         </div>
         <ul class="nav-links">
           <li>
-            <a href="/">Home</a>
+            <NavLink to="/main/home">Home</NavLink>
           </li>
           <li>
             <a href="/">Solutions</a>
           </li>
           <li>
-            <a href="browselocation">Browse Location</a>
+            <NavLink to="/main/browselocation">Browse Location</NavLink>
           </li>
           <li>
             <a href="/">Services</a>
@@ -73,18 +73,16 @@ const NavBar = () => {
             <a href="/">Contact Us</a>
           </li>
           <li>
-            <a href="signin">
-              <button class="nav-in" href="signin">
-                Sign In
-              </button>
-            </a>
+            <NavLink to="/main/signin">
+              <button class="nav-in">Sign In</button>
+            </NavLink>
           </li>
           <li>
-            <a href="signup">
-              <button class="nav-up" href="signup">
+            <NavLink to="/main/signup">
+              <button class="nav-up" >
                 Sign Up
               </button>
-            </a>
+            </NavLink>
           </li>
           {showLogout()}
         </ul>

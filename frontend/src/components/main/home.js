@@ -26,7 +26,7 @@ const Home = () => {
                 {/* <!-- Slide 1 --> */}
                 <div
                   class="carousel-item active"
-                  style="background-image: url(assets/img/slide/slide-1.jpg)"
+                  style={{backgroundImage: 'url(https://media.istockphoto.com/photos/storage-room-of-a-restaurant-or-a-cafe-with-nonperishable-food-picture-id1309407335?k=20&m=1309407335&s=612x612&w=0&h=hspEOzX07FrHrgo2iUyvn5on_7vsvYIDITSupmokj_Y=)'}}
                 >
                   <div class="carousel-container">
                     <div class="carousel-content">
@@ -37,14 +37,14 @@ const Home = () => {
                         Our website will provide you rental storage services for
                         your Household goods{" "}
                       </p>
-                      {/* <!-- <a href="" class="btn-get-started animate__animated animate__fadeInUp">Read More</a> --> */}
+                    
                     </div>
                   </div>
                 </div>
                 {/* <!-- Slide 2 --> */}
                 <div
                   class="carousel-item"
-                  style="background-image: url(assets/img/slide/slide-2.jpg)"
+                  style={{backgroundImage: 'url(https://media.istockphoto.com/photos/self-storage-room-with-boxes-picture-id1280808958?k=20&m=1280808958&s=612x612&w=0&h=KEFjAv1DfABLscjYOJj3WT7fdCgH2Qj8JH7_a8KGCes=)'}}
                 >
                   <div class="carousel-container">
                     <div class="carousel-content">
@@ -55,21 +55,12 @@ const Home = () => {
                         Reclaim Your Personal Space Declutter Your Life With The
                         Power Of Self Storage!
                       </p>
-                      {/* <!-- <a href="" class="btn-get-started animate__animated animate__fadeInUp">Read More</a> --> */}
+                   
                     </div>
                   </div>
                 </div>
 
-                {/* <!-- Slide 3 --> */}
-                {/* <!-- <div class="carousel-item" style="background-image: url(assets/img/slide/slide-3.jpg)">
-         <div class="carousel-container">
-           <div class="carousel-content">
-             <h2 class="animate__animated animate__fadeInDown">Sequi ea <span>Dime Lara</span></h2>
-             <p class="animate__animated animate__fadeInUp">Ut velit est quam dolor ad a aliquid qui aliquid. Sequi ea ut et est quaerat sequi nihil ut aliquam. Occaecati alias dolorem mollitia ut. Similique ea voluptatem. Esse doloremque accusamus repellendus deleniti vel. Minus et tempore modi architecto.</p>
-             <a href="" class="btn-get-started animate__animated animate__fadeInUp">Read More</a>
-           </div>
-         </div>
-       </div> --> */}
+              
               </div>
 
               <a
@@ -116,7 +107,7 @@ const Home = () => {
               </p>
             </div>
 
-            <div class="clients-slider swiper">
+            {/* <div class="clients-slider swiper">
               <div class="swiper-wrapper align-items-center">
                 <div class="swiper-slide">
                   <img
@@ -159,7 +150,7 @@ const Home = () => {
                   <p style={{ textAlign: "center" }}>pest control</p>
                 </div>
               </div>
-            </div>
+            </div> */}
           </div>
 
           {/* </div> */}
@@ -202,7 +193,7 @@ const Home = () => {
                   <div class="icon-box icon-bg-3">
                     <div>
                       <h3>
-                        <a href="">Packers & Movers</a>
+                        <a href="">Packers and Movers</a>
                       </h3>
                       <p>
                         Duis aute irure dolor in reprehenderit in voluptate
@@ -251,12 +242,7 @@ const Home = () => {
                       plans and space..
                     </li>
                   </ul>
-                  {/* <!-- <p>
-             Ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in
-             voluptate
-             velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-             culpa qui officia deserunt mollit anim id est laborum
-           </p> --> */}
+               
                 </div>
               </div>
             </div>
@@ -378,48 +364,85 @@ const Home = () => {
             </div>
           </section>
           {/* <!-- End Services Section --> */}
+
+
+          {/* <section id="contact" class="contact">
+      <div class="container" data-aos="fade-up">
+
+        <div class="section-title">
+          <h2>Contact</h2>
+          <p>Contact To our website</p>
+        </div>
+
+        <div class="row">
+
+          <div class="col-lg-5 d-flex align-items-stretch">
+            <div class="info">
+              <div class="address">
+                <i class="bi bi-geo-alt"></i>
+                <h4>Location:</h4>
+                <p>A108 Adam Street, New York, NY 535022</p>
+              </div>
+
+              <div class="email">
+                <i class="bi bi-envelope"></i>
+                <h4>Email:</h4>
+                <p>info@example.com</p>
+              </div>
+
+              <div class="phone">
+                <i class="bi bi-phone"></i>
+                <h4>Call:</h4>
+                <p>+1 5589 55488 55s</p>
+              </div>
+
+              
+              
+              <iframe src="https://www.google.com/maps/d/embed?mid=1vEUlxdYyuQKYJA7unji8dV1H1kTdXUQ&ehbc=2E312F" frameborder="0" style="border:0; width: 100%; height: 290px;" allowfullscreen></iframe>
+            </div>
+
+          </div>
+
+          <div class="col-lg-7 mt-5 mt-lg-0 d-flex align-items-stretch">
+            <form action="forms/contact.php" method="post" role="form" class="php-email-form">
+              <div class="row">
+                <div class="form-group col-md-6">
+                  <label for="name">Your Name</label>
+                  <input type="text" name="name" class="form-control" id="name" required/>
+                </div>
+                <div class="form-group col-md-6">
+                  <label for="name">Your Email</label>
+                  <input type="email" class="form-control" name="email" id="email" required/>
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="name">Subject</label>
+                <input type="text" class="form-control" name="subject" id="subject" required/>
+              </div>
+              <div class="form-group">
+                <label for="name">Message</label>
+                <textarea class="form-control" name="message" rows="10" required></textarea>
+              </div>
+              <div class="my-3">
+                <div class="loading">Loading</div>
+                <div class="error-message"></div>
+                <div class="sent-message">Your message has been sent. Thank you!</div>
+              </div>
+              <div class="text-center"><button type="submit">Send Message</button></div>
+            </form>
+          </div>
+
+        </div>
+
+      </div>
+    </section> */}
+
         </main>
         {/* <!-- End #main --> */}
 
         {/* <!-- ======= Footer ======= --> */}
         <footer id="footer">
-          {/* <!-- <div class="footer-newsletter">
-     <div class="container offer-con">
-       <div class="row">
-         <div class="col-lg-12 r">
-
-           <h1 class="align-items-center">Our Offering</h1>
-         </div>
-       </div>
-       <div class="row">
-         <div class="col-lg-4">
-           <div class="icon-box">
-             <i class="bi bi-card-checklist"></i>
-             <h3><a href="">Lorem Ipsum</a></h3>
-             <p>Voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate
-               non provident</p>
-           </div>
-         </div>
-         <div class="col-lg-4 mt-4 mt-lg-0">
-           <div class="icon-box">
-             <i class="bi bi-bar-chart"></i>
-             <h3><a href="">Dolor Sitema</a></h3>
-             <p>Minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat tarad
-               limino ata</p>
-           </div>
-         </div>
-         <div class="col-lg-4 mt-4 mt-lg-0">
-           <div class="icon-box">
-             <i class="bi bi-binoculars"></i>
-             <h3><a href="">Sed ut perspiciatis</a></h3>
-             <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur
-             </p>
-           </div>
-         </div>
-       </div> --> */}
-
-          {/* </div>
-   </div> */}
+       
 
           <div class="footer-top">
             <div class="container">
@@ -428,37 +451,28 @@ const Home = () => {
                   <h4>Useful Links</h4>
                   <ul>
                     <li>
-                      <i class="bx bx-chevron-right"></i> <a href="#">Home</a>
+                      <i class="bx bx-chevron-right"></i> <a href="/">Home</a>
                     </li>
                     <li>
                       <i class="bx bx-chevron-right"></i>{" "}
-                      <a href="#">About us</a>
+                      <a href="/">About us</a>
                     </li>
                     <li>
                       <i class="bx bx-chevron-right"></i>{" "}
-                      <a href="#">Services</a>
+                      <a href="/">Services</a>
                     </li>
                     <li>
                       <i class="bx bx-chevron-right"></i>{" "}
-                      <a href="#">Terms of service</a>
+                      <a href="/">Terms of service</a>
                     </li>
                     <li>
                       <i class="bx bx-chevron-right"></i>{" "}
-                      <a href="#">Privacy policy</a>
+                      <a href="/">Privacy policy</a>
                     </li>
                   </ul>
                 </div>
 
-                {/* <!-- <div class="col-lg-3 col-md-6 footer-links">
-           <h4>Our Services</h4>
-           <ul>
-             <li><i class="bx bx-chevron-right"></i> <a href="#">Web Design</a></li>
-             <li><i class="bx bx-chevron-right"></i> <a href="#">Web Development</a></li>
-             <li><i class="bx bx-chevron-right"></i> <a href="#">Product Management</a></li>
-             <li><i class="bx bx-chevron-right"></i> <a href="#">Marketing</a></li>
-             <li><i class="bx bx-chevron-right"></i> <a href="#">Graphic Design</a></li>
-           </ul>
-         </div> --> */}
+              
 
                 <div class="col-lg-3 col-md-6 footer-contact">
                   <h4>Contact Us</h4>
@@ -482,16 +496,16 @@ const Home = () => {
                     provide you rental storage space at low cost
                   </p>
                   <div class="social-links mt-3">
-                    <a href="#" class="twitter">
+                    <a href="/" class="twitter">
                       <i class="bx bxl-twitter"></i>
                     </a>
-                    <a href="#" class="facebook">
+                    <a href="/" class="facebook">
                       <i class="bx bxl-facebook"></i>
                     </a>
-                    <a href="#" class="instagram">
+                    <a href="/" class="instagram">
                       <i class="bx bxl-instagram"></i>
                     </a>
-                    <a href="#" class="linkedin">
+                    <a href="/" class="linkedin">
                       <i class="bx bxl-linkedin"></i>
                     </a>
                   </div>
@@ -500,25 +514,12 @@ const Home = () => {
             </div>
           </div>
           <div>
-            <h5 style="text-align: center; padding-top :40px">
+            <h5 style={{ textAlign: "center", paddingTop: "40px" }}>
               {" "}
               My SelfStorage
             </h5>
           </div>
         </footer>
-        {/* <!-- End Footer --> */}
-
-        {/* <!-- Vendor JS Files --> */}
-        {/* <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
-        <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-        <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
-        <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script> */}
-        {/* <script src="assets/vendor/swiper/swiper-bundle.min.js"></script> */}
-        {/* <script src="assets/vendor/waypoints/noframework.waypoints.js"></script> */}
-        {/* <script src="assets/vendor/php-email-form/validate.js"></script> */}
-
-        {/* <!-- Template Main JS File --> */}
-        <script src="assets/js/main.js"></script>
       </body>
     </>
   );

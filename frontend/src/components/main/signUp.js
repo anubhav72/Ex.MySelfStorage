@@ -7,6 +7,7 @@ import app_config from "../../config";
 import Swal from "sweetalert2";
 import * as Yup from "yup";
 import NavBar from "./navBar";
+import { NavLink } from "react-router-dom";
 const SignUp = () => {
   const url = app_config.backend_url;
   // for sendind formdata to database
@@ -129,16 +130,16 @@ const SignUp = () => {
                   </div>
                   <div className="main-signup-info">
                     <p>OR</p>
-                    <div className="signup-google">
+                    {/* <div className="signup-google">
                       <button>
                         {" "}
                         <img src={google} alt="" />{" "}
                         <span> Sign up with Google</span>
                       </button>
-                    </div>
+                    </div> */}
 
                     <p>
-                      Already have an account? <a href="signIn"> Sign In</a>
+                      Already have an account? <NavLink to="/main/signIn"> Sign In</NavLink>
                     </p>
                   </div>
                 </form>

@@ -30,6 +30,12 @@
     width: 290px;
     margin: 0%;
   }
+ .nav-head a{
+    color: white;
+  }
+ .nav-head a:hover{
+    color: #61dafb;
+  }
   
   /*Styling Links*/
   .nav-links {

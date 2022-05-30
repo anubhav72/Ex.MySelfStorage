@@ -6,7 +6,7 @@ import login_mobile from "./resource/loginmobile.png";
 import Swal from "sweetalert2";
 import * as Yup from "yup";
 // import NavBar from "./navBar";
-import { useNavigate } from "react-router-dom";
+import { NavLink, useNavigate } from "react-router-dom";
 import app_config from "../../config";
 
 const SignIn = () => {
@@ -110,16 +110,16 @@ const SignIn = () => {
                 </div>
                 <div className="main-signin-info">
                   <p>OR</p>
-                  <div className="google-signin">
+                  {/* <div className="google-signin">
                     <button>
                       {" "}
                       <img src={google} alt="" />{" "}
                       <span> Sign In with Google</span>
                     </button>
-                  </div>
+                  </div> */}
 
                   <p>
-                    Create a new account? <a href="signup"> Sign Up</a>
+                    Create a new account? <NavLink to="/main/signup"> Sign Up</NavLink>
                   </p>
                 </div>
               </form>
