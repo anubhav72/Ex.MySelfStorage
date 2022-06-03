@@ -121,8 +121,9 @@ const BrowseLocation = () => {
                 <div
                   style={{
                     background:
-                      "url(https://shg-prd.azureedge.net/-/media/shurgard/general/unit-pictures/01dot5-tb.jpg?extension=webp&w=126&h=108&hash=CBB96A06060A707BF07B4250584BB5C8)",
+                      "url(https://media.istockphoto.com/photos/empty-basement-room-wooden-storage-shelve-illuminated-ceiling-lamp-picture-id175419479?k=20&m=175419479&s=612x612&w=0&h=3R78o0_uUNEH8AC0ncCvrW0BhMb4sChuj-Aw2wIjt_s=)",
                     backgroundSize: "cover",
+                    backgroundRepeat: "no-repeat, repeat",
                     height: "100%",
                   }}
                 ></div>

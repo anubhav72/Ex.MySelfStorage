@@ -26,7 +26,10 @@ const Home = () => {
                 {/* <!-- Slide 1 --> */}
                 <div
                   class="carousel-item active"
-                  style={{backgroundImage: 'url(https://media.istockphoto.com/photos/storage-room-of-a-restaurant-or-a-cafe-with-nonperishable-food-picture-id1309407335?k=20&m=1309407335&s=612x612&w=0&h=hspEOzX07FrHrgo2iUyvn5on_7vsvYIDITSupmokj_Y=)'}}
+                  style={{
+                    backgroundImage:
+                      "url(https://media.istockphoto.com/photos/storage-room-of-a-restaurant-or-a-cafe-with-nonperishable-food-picture-id1309407335?k=20&m=1309407335&s=612x612&w=0&h=hspEOzX07FrHrgo2iUyvn5on_7vsvYIDITSupmokj_Y=)",
+                  }}
                 >
                   <div class="carousel-container">
                     <div class="carousel-content">
@@ -37,14 +40,16 @@ const Home = () => {
                         Our website will provide you rental storage services for
                         your Household goods{" "}
                       </p>
-                    
                     </div>
                   </div>
                 </div>
                 {/* <!-- Slide 2 --> */}
                 <div
                   class="carousel-item"
-                  style={{backgroundImage: 'url(https://media.istockphoto.com/photos/self-storage-room-with-boxes-picture-id1280808958?k=20&m=1280808958&s=612x612&w=0&h=KEFjAv1DfABLscjYOJj3WT7fdCgH2Qj8JH7_a8KGCes=)'}}
+                  style={{
+                    backgroundImage:
+                      "url(https://media.istockphoto.com/photos/self-storage-room-with-boxes-picture-id1280808958?k=20&m=1280808958&s=612x612&w=0&h=KEFjAv1DfABLscjYOJj3WT7fdCgH2Qj8JH7_a8KGCes=)",
+                  }}
                 >
                   <div class="carousel-container">
                     <div class="carousel-content">
@@ -55,12 +60,9 @@ const Home = () => {
                         Reclaim Your Personal Space Declutter Your Life With The
                         Power Of Self Storage!
                       </p>
-                   
                     </div>
                   </div>
                 </div>
-
-              
               </div>
 
               <a
@@ -242,7 +244,6 @@ const Home = () => {
                       plans and space..
                     </li>
                   </ul>
-               
                 </div>
               </div>
             </div>
@@ -314,7 +315,7 @@ const Home = () => {
                 <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4">
                   <div class="icon-box">
                     <div class="icon">
-                      <i class="fa-solid fa-warehouse-full"></i>
+                      <i class="bx bi bi-house-door"></i>
                     </div>
                     <h4>
                       <a href="">Excess Inventory</a>
@@ -365,85 +366,111 @@ const Home = () => {
           </section>
           {/* <!-- End Services Section --> */}
 
-
-          {/* <section id="contact" class="contact">
-      <div class="container" data-aos="fade-up">
-
-        <div class="section-title">
-          <h2>Contact</h2>
-          <p>Contact To our website</p>
-        </div>
-
-        <div class="row">
-
-          <div class="col-lg-5 d-flex align-items-stretch">
-            <div class="info">
-              <div class="address">
-                <i class="bi bi-geo-alt"></i>
-                <h4>Location:</h4>
-                <p>A108 Adam Street, New York, NY 535022</p>
+          <section id="contact" class="contact">
+            <div class="container" data-aos="fade-up">
+              <div class="section-title">
+                <h2>Contact</h2>
+                <p>Contact To our website</p>
               </div>
 
-              <div class="email">
-                <i class="bi bi-envelope"></i>
-                <h4>Email:</h4>
-                <p>info@example.com</p>
-              </div>
-
-              <div class="phone">
-                <i class="bi bi-phone"></i>
-                <h4>Call:</h4>
-                <p>+1 5589 55488 55s</p>
-              </div>
-
-              
-              
-              <iframe src="https://www.google.com/maps/d/embed?mid=1vEUlxdYyuQKYJA7unji8dV1H1kTdXUQ&ehbc=2E312F" frameborder="0" style="border:0; width: 100%; height: 290px;" allowfullscreen></iframe>
-            </div>
-
-          </div>
-
-          <div class="col-lg-7 mt-5 mt-lg-0 d-flex align-items-stretch">
-            <form action="forms/contact.php" method="post" role="form" class="php-email-form">
               <div class="row">
-                <div class="form-group col-md-6">
-                  <label for="name">Your Name</label>
-                  <input type="text" name="name" class="form-control" id="name" required/>
+                <div class="col-lg-5 d-flex align-items-stretch">
+                  <div class="info">
+                    <div class="address">
+                      <i class="bi bi-geo-alt"></i>
+                      <h4>Location:</h4>
+                      <p>A108 Adam Street, New York, NY 535022</p>
+                    </div>
+
+                    <div class="email">
+                      <i class="bi bi-envelope"></i>
+                      <h4>Email:</h4>
+                      <p>info@example.com</p>
+                    </div>
+
+                    <div class="phone">
+                      <i class="bi bi-phone"></i>
+                      <h4>Call:</h4>
+                      <p>+1 5589 55488 55s</p>
+                    </div>
+
+                    <iframe
+                      src="https://www.google.com/maps/d/embed?mid=1vEUlxdYyuQKYJA7unji8dV1H1kTdXUQ&ehbc=2E312F"
+                      frameborder="0"
+                      style={{ border: "0", width: "100%", height:"290px" }}
+                      allowfullscreen
+                    ></iframe>
+                  </div>
                 </div>
-                <div class="form-group col-md-6">
-                  <label for="name">Your Email</label>
-                  <input type="email" class="form-control" name="email" id="email" required/>
+
+                <div class="col-lg-7 mt-5 mt-lg-0 d-flex align-items-stretch">
+                  <form
+                    action="forms/contact.php"
+                    method="post"
+                    role="form"
+                    class="php-email-form"
+                  >
+                    <div class="row">
+                      <div class="form-group col-md-6">
+                        <label for="name">Your Name</label>
+                        <input
+                          type="text"
+                          name="name"
+                          class="form-control"
+                          id="name"
+                          required
+                        />
+                      </div>
+                      <div class="form-group col-md-6">
+                        <label for="name">Your Email</label>
+                        <input
+                          type="email"
+                          class="form-control"
+                          name="email"
+                          id="email"
+                          required
+                        />
+                      </div>
+                    </div>
+                    <div class="form-group">
+                      <label for="name">Subject</label>
+                      <input
+                        type="text"
+                        class="form-control"
+                        name="subject"
+                        id="subject"
+                        required
+                      />
+                    </div>
+                    <div class="form-group">
+                      <label for="name">Message</label>
+                      <textarea
+                        class="form-control"
+                        name="message"
+                        rows="10"
+                        required
+                      ></textarea>
+                    </div>
+                    <div class="my-3">
+                      <div class="loading">Loading</div>
+                      <div class="error-message"></div>
+                      <div class="sent-message">
+                        Your message has been sent. Thank you!
+                      </div>
+                    </div>
+                    <div class="text-center">
+                      <button type="submit">Send Message</button>
+                    </div>
+                  </form>
                 </div>
               </div>
-              <div class="form-group">
-                <label for="name">Subject</label>
-                <input type="text" class="form-control" name="subject" id="subject" required/>
-              </div>
-              <div class="form-group">
-                <label for="name">Message</label>
-                <textarea class="form-control" name="message" rows="10" required></textarea>
-              </div>
-              <div class="my-3">
-                <div class="loading">Loading</div>
-                <div class="error-message"></div>
-                <div class="sent-message">Your message has been sent. Thank you!</div>
-              </div>
-              <div class="text-center"><button type="submit">Send Message</button></div>
-            </form>
-          </div>
-
-        </div>
-
-      </div>
-    </section> */}
-
+            </div>
+          </section>
         </main>
         {/* <!-- End #main --> */}
 
         {/* <!-- ======= Footer ======= --> */}
         <footer id="footer">
-       
-
           <div class="footer-top">
             <div class="container">
               <div class="row">
@@ -473,21 +500,6 @@ const Home = () => {
                 </div>
 
               
-
-                <div class="col-lg-3 col-md-6 footer-contact">
-                  <h4>Contact Us</h4>
-                  <p>
-                    A108 Adam Street <br />
-                    New York, NY 535022
-                    <br />
-                    United States <br />
-                    <br />
-                    <strong>Phone:</strong> +1 5589 55488 55
-                    <br />
-                    <strong>Email:</strong> info@example.com
-                    <br />
-                  </p>
-                </div>
 
                 <div class="col-lg-3 col-md-6 footer-info">
                   <h3>About My SelfStorage</h3>
